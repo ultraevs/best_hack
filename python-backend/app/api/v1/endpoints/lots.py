@@ -1,8 +1,8 @@
-from typing import List
+from typing import List, Optional
 from fastapi import APIRouter, Depends, HTTPException, Query
 from sqlalchemy.orm import Session
 from app.db.session import get_db
-from app.services.lot_service import get_lots, get_lot
+from app.services.lot_service import get_lots, get_lot, search_lots
 from app.api.v1.schemas.lot import Lot
 
 router = APIRouter()
@@ -12,6 +12,8 @@ def get_filtered_lots(
     fuel_type: List[str] = Query(None),
     nb_name: List[str] = Query(None),  
     nb_region: List[str] = Query(None),  
+    min_price: Optional[float] = Query(None),
+    max_price: Optional[float] = Query(None),
     db: Session = Depends(get_db)
 ):
     filters = {
@@ -22,7 +24,11 @@ def get_filtered_lots(
 
     filters = {k: v for k, v in filters.items() if v}
 
-    lots = get_lots(db, filters=filters)
+    price_range = None
+    if min_price is not None or max_price is not None:
+        price_range = (min_price or 0, max_price or float('inf')) 
+
+    lots = get_lots(db, filters=filters, price_range=price_range)
     return lots
 
 @router.get("/lots/{lot_id}", response_model=Lot)
@@ -31,3 +37,11 @@ def read_lot(lot_id: int, db: Session = Depends(get_db)):
     if lot is None:
         raise HTTPException(status_code=404, detail="Lot not found")
     return lot
+
+@router.get("/search-lots/", response_model=List[Lot])
+def search_lots_endpoint(
+    search_query: str = Query(..., description="Строка поиска"),
+    db: Session = Depends(get_db)
+):
+    lots = search_lots(db, search_query)
+    return lots
