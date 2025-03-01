@@ -23,6 +23,10 @@ const Wrapper = styled.header`
 const StyledNavLink = styled(NavLink)`
   font-size: 16px;
   color: ${colors.primaryBlack};
+
+  &:hover {
+    color: ${colors.primaryRed};
+  }
 `
 
 export function Header() {

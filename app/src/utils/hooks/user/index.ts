@@ -1,0 +1,1 @@
+export { useGetUserInfo } from './useGetUserInfo'

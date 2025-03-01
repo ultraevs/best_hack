@@ -15,5 +15,10 @@ export const antdTheme: ThemeConfig = {
       hoverBorderColor: colors.primaryRed,
       activeBorderColor: colors.primaryRed,
     },
+    Select: {
+      hoverBorderColor: colors.primaryRed,
+      activeBorderColor: colors.primaryRed,
+      // optionSelectedBg: colors.primaryRed,
+    }
   },
 }

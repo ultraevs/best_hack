@@ -6,12 +6,12 @@ import { useForm, Controller } from 'react-hook-form'
 import { InputField } from '@/components/form/InputField'
 import { Link, useNavigate } from 'react-router'
 import { routes } from '@/router/routes'
-
-import * as S from '@/pages/auth/AuthPage.styled'
 import { LoginUser } from '@/api/auth/auth'
 import { jwtDecode } from 'jwt-decode'
 import { UserType, useUser } from '@/helpers/user/UserProvider'
 import { useCookies } from 'react-cookie'
+
+import * as S from '@/pages/Auth/AuthPage.styled'
 
 const loginSchema = z.object({
   username: z.string().refine(isDefined, 'Обязательное поле'),
@@ -48,7 +48,7 @@ export function LoginPage() {
       setUser(user as UserType)
 
       if (user) {
-        navigate(routes.profile.url)
+        navigate(routes.main.url)
       }
     } catch (error) {
       notification.error({

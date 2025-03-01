@@ -4,8 +4,8 @@ import PrivateRoute from '@/router/PrivateRoute'
 import { MainPage } from '@/pages/MainPage'
 import { ProfilePage } from '@/pages/ProfilePage'
 import { NotFound } from '@/pages/NotFound'
-import { LoginPage } from '@/pages/auth/LoginPage'
-import { RegisterPage } from '@/pages/auth/RegisterPage'
+import { LoginPage } from '@/pages/Auth/LoginPage'
+import { RegisterPage } from '@/pages/Auth/RegisterPage'
 
 export function Router() {
   return (
