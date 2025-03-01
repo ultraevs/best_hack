@@ -22,3 +22,8 @@ class TokenData(BaseModel):
     username: str | None = None
     user_id: int | None = None
     email: str | None = None
+
+
+class LoginRequest(BaseModel):
+    username: str
+    password: str

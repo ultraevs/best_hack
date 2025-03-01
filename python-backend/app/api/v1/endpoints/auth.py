@@ -3,7 +3,7 @@ from fastapi.security import OAuth2PasswordBearer, OAuth2PasswordRequestForm
 from sqlalchemy.orm import Session
 from app.db.session import get_db
 from app.db.models.user import User
-from app.api.v1.schemas.user import UserCreate, Token
+from app.api.v1.schemas.user import UserCreate, Token, LoginRequest
 from app.core.security import get_password_hash, create_access_token, verify_password
 from datetime import timedelta
 from app.api.v1.schemas.user import Token
@@ -32,9 +32,9 @@ def register(user: UserCreate, db: Session = Depends(get_db)):
 
 
 @router.post("/token/", response_model=Token)
-def login(form_data: OAuth2PasswordRequestForm = Depends(), db: Session = Depends(get_db)):
-    user = db.query(User).filter(User.username == form_data.username).first()
-    if not user or not verify_password(form_data.password, user.hashed_password):
+def login(data: LoginRequest, db: Session = Depends(get_db)):
+    user = db.query(User).filter(User.username == data.username).first()
+    if not user or not verify_password(data.password, user.hashed_password):
         raise HTTPException(
             status_code=status.HTTP_401_UNAUTHORIZED,
             detail="Incorrect username or password",
