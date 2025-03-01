@@ -16,6 +16,8 @@ def create_order(db: Session, order: OrderCreate):
         )
     
     lot.available_volume -= order.volume
+
+    lot.lot_price = lot.price_per_ton * lot.available_volume
     
     if lot.available_volume == 0:
         lot.status = "Продан"

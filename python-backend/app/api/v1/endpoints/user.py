@@ -11,7 +11,6 @@ def get_current_user_info(
     current_user: TokenData = Depends(decode_token),
     db: Session = Depends(get_db)
 ):
-    print(current_user)
     user_info = {
         "username": current_user.username,
         "id": current_user.user_id,
