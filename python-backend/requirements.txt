@@ -11,3 +11,5 @@ python-multipart
 pydantic[email]
 apscheduler
 pandas
+httpx
+pytest

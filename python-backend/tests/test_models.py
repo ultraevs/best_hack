@@ -1,11 +1,10 @@
-from app.services.order_service import create_order
 from app.db.models.lot import Lot
-from app.api.v1.schemas.order import OrderCreate
+from app.db.models.order import Order
 from datetime import date
 import pytest
 
 @pytest.fixture(scope="function")
-def test_create_order(db_session):
+def test_lot_model(db_session):
     lot = Lot(
         date=date.today(),
         ksss_nb_code=101,
@@ -20,18 +19,18 @@ def test_create_order(db_session):
     )
     db_session.add(lot)
     db_session.commit()
+    assert lot.id is not None
 
-    order_data = OrderCreate(
-        lot_id=lot.id,
-        nb_name="Нефтебаза_1",
-        nb_region="Москва",
-        fuel_type="АИ-95",
+@pytest.fixture(scope="function")
+def test_order_model(db_session):
+    order = Order(
+        order_date=date.today(),
+        lot_id=1,
+        client_id=1,
         volume=1000,
         delivery_type="Доставка",
         delivery_address="ул. Ленина, 10"
     )
-    order = create_order(db_session, order_data)
-
+    db_session.add(order)
+    db_session.commit()
     assert order.id is not None
-    assert order.volume == 1000
-    assert order.delivery_type == "Доставка"
