@@ -9,3 +9,5 @@ python-jose[cryptography]
 passlib[bcrypt]
 python-multipart
 pydantic[email]
+apscheduler
+pandas

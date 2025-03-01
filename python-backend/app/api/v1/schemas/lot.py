@@ -3,8 +3,8 @@ from datetime import date
 
 class LotBase(BaseModel):
     date: date
-    ksss_nb_code: int
-    ksss_fuel_code: int
+    fuel_type: str
+    nb_name: str
     start_weight: float
     available_volume: float
     status: str

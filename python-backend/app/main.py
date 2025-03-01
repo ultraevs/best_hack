@@ -3,9 +3,15 @@ from app.api.v1.endpoints import lots, orders, auth, user
 from app.db.session import engine
 from app.db.models.base import Base
 from fastapi.middleware.cors import CORSMiddleware
+from app.scheduler.scheduler import start_scheduler
+
 Base.metadata.create_all(bind=engine)
 
 app = FastAPI()
+
+@app.on_event("startup")
+def startup_event():
+    start_scheduler()
 
 app.add_middleware(
     CORSMiddleware,
