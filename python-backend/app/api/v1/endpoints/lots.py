@@ -7,7 +7,7 @@ from app.api.v1.schemas.lot import Lot
 
 router = APIRouter()
 
-@router.get("/lots/", response_model=list[Lot])
+@router.get("/lots/", response_model=List[Lot])
 def get_filtered_lots(
     fuel_type: List[str] = Query(None),
     nb_name: List[str] = Query(None),  

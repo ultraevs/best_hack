@@ -1,3 +1,4 @@
+from datetime import date
 from typing import Dict, List, Optional
 from sqlalchemy.orm import Session
 from app.db.models.lot import Lot
@@ -28,6 +29,15 @@ def get_lots(
     try:
         query = db.query(Lot)
 
+        today = date.today()
+        inactive_lots = query.filter(Lot.date <= today).all()
+        for lot in inactive_lots:
+            if lot.status != "Неактивен":
+                lot.status = "Неактивен"
+                logger.info(f"Lot marked as 'Неактивен' - Lot ID: {lot.id}, Date: {lot.date}")
+        db.commit()
+
+        query = query.filter(Lot.date > today)
         for field, values in filters.items():
             if values:
                 query = query.filter(getattr(Lot, field).in_(values))
