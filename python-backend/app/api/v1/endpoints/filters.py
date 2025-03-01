@@ -1,24 +1,10 @@
 from fastapi import APIRouter, Depends
 from sqlalchemy.orm import Session
-from sqlalchemy import distinct
 from app.db.session import get_db
-from app.db.models.lot import Lot
 from typing import List, Dict
-
+from app.services.filters import lot_filters_service
 router = APIRouter()
 
 @router.get("/lot-filters/", response_model=Dict[str, List[str]])
 def get_lot_filters(db: Session = Depends(get_db)):
-    nb_names = db.query(distinct(Lot.nb_name)).all()
-    nb_regions = db.query(distinct(Lot.nb_region)).all()
-    fuel_types = db.query(distinct(Lot.fuel_type)).all()
-
-    nb_names = [name[0] for name in nb_names if name[0] is not None]
-    nb_regions = [region[0] for region in nb_regions if region[0] is not None]
-    fuel_types = [fuel[0] for fuel in fuel_types if fuel[0] is not None]
-
-    return {
-        "nb_name": nb_names,
-        "nb_region": nb_regions,
-        "fuel_type": fuel_types,
-    }
+    return lot_filters_service(db)

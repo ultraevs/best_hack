@@ -1,7 +1,7 @@
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
 from app.db.session import get_db
-from app.services.order_service import create_order
+from app.services.order_service import create_order, delete_order
 from app.api.v1.schemas.user import TokenData
 from app.core.security import decode_token
 from app.api.v1.schemas.order import OrderCreate, Order
@@ -30,20 +30,4 @@ def cancel_order(
     db: Session = Depends(get_db),
     current_user: TokenData = Depends(decode_token)
 ):
-    order = db.query(bOrder).filter(bOrder.id == order_id).first()
-    if not order:
-        raise HTTPException(status_code=404, detail="Order not found")
-    
-    if order.client_id != current_user.user_id:
-        raise HTTPException(status_code=403, detail="You can only cancel your own orders")
-    
-    lot = db.query(Lot).filter(Lot.id == order.lot_id).first()
-    if not lot:
-        raise HTTPException(status_code=404, detail="Lot not found")
-    
-    lot.available_volume += order.volume
-    
-    db.delete(order)
-    db.commit()
-    
-    return {"message": "Order cancelled successfully"}
+    return delete_order(order_id, db, current_user)
