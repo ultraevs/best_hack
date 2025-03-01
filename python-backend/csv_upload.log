@@ -1,0 +1,12 @@
+2025-03-02 02:47:27,241 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-03-02 02:47:27,242 - apscheduler.scheduler - INFO - Added job "monitor_csv_folder" to job store "default"
+2025-03-02 02:47:27,242 - apscheduler.scheduler - INFO - Scheduler started
+2025-03-02 02:47:36,623 - app.services.lot_service - INFO - Fetched 3 lots with filters: {}, price_range: None
+2025-03-02 02:47:47,367 - app.services.lot_service - INFO - Lot marked as 'Неактивен' - Lot ID: 3, Date: 2024-10-02
+2025-03-02 02:47:47,511 - app.services.lot_service - INFO - Fetched 2 lots with filters: {}, price_range: None
+2025-03-02 02:56:04,523 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-03-02 02:56:04,523 - apscheduler.scheduler - INFO - Added job "monitor_csv_folder" to job store "default"
+2025-03-02 02:56:04,523 - apscheduler.scheduler - INFO - Scheduler started
+2025-03-02 02:56:09,978 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-03-02 02:56:09,979 - apscheduler.scheduler - INFO - Added job "monitor_csv_folder" to job store "default"
+2025-03-02 02:56:09,979 - apscheduler.scheduler - INFO - Scheduler started

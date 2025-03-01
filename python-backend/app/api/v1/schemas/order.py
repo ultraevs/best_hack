@@ -19,7 +19,7 @@ class OrderCreate(BaseModel):
     fuel_type: str
     volume: float
     delivery_type: str
-    delivery_address: str
+    delivery_address: str | None = None
 
 
 class Order(OrderBase):
