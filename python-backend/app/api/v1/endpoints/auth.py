@@ -4,15 +4,15 @@ from sqlalchemy.orm import Session
 from app.db.session import get_db
 from app.db.models.user import User
 from app.api.v1.schemas.user import UserCreate, Token
-from app.api.v1.schemas.user import User as pUser
 from app.core.security import get_password_hash, create_access_token, verify_password
 from datetime import timedelta
+from app.api.v1.schemas.user import Token
 
 router = APIRouter()
 
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="token")
 
-@router.post("/register/", response_model=pUser)
+@router.post("/register/", response_model=Token)
 def register(user: UserCreate, db: Session = Depends(get_db)):
     db_user_email = db.query(User).filter(User.email == user.email).first()
     db_user_username = db.query(User).filter(User.username == user.username).first()
