@@ -1,27 +1,48 @@
-import { useState, createContext, PropsWithChildren, useContext } from 'react'
+import {
+  useState,
+  useEffect,
+  createContext,
+  PropsWithChildren,
+  useContext,
+} from 'react'
+
+interface IUser {
+  sub: string
+  id: number
+  email: string
+  exp: number
+}
+
+export type UserType = IUser | null
 
 interface IUserContext {
-  user: any
+  user: UserType
+  setUser: (value: UserType) => void
   logout: () => void
 }
 
 const userContext = createContext<IUserContext>({
   user: null,
+  setUser: () => {},
   logout: () => {},
 })
 
 export function UserProvider({
   initialUser,
   children,
-}: PropsWithChildren<{ initialUser: any }>) {
+}: PropsWithChildren<{ initialUser: UserType }>) {
   const [user, setUser] = useState<any>(initialUser)
 
   function logout() {
     setUser(null)
   }
 
+  useEffect(() => {
+    setUser(initialUser)
+  }, [initialUser])
+
   return (
-    <userContext.Provider value={{ user, logout }}>
+    <userContext.Provider value={{ user, setUser, logout }}>
       {children}
     </userContext.Provider>
   )

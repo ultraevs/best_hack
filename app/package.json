@@ -13,6 +13,7 @@
     "@hookform/resolvers": "^4.1.2",
     "antd": "^5.24.2",
     "axios": "^1.8.1",
+    "jwt-decode": "^4.0.0",
     "react": "^18.2.0",
     "react-cookie": "^7.2.2",
     "react-dom": "^18.2.0",
