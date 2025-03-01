@@ -6,6 +6,7 @@ import { ProfilePage } from '@/pages/ProfilePage'
 import { NotFound } from '@/pages/NotFound'
 import { LoginPage } from '@/pages/Auth/LoginPage'
 import { RegisterPage } from '@/pages/Auth/RegisterPage'
+import { AdminPage } from '@/pages/AdminPage'
 
 export function Router() {
   return (
@@ -21,6 +22,8 @@ export function Router() {
       />
       <Route path={routes.login.url} element={<LoginPage />} />
       <Route path={routes.register.url} element={<RegisterPage />} />
+      <Route path={routes.register.url} element={<RegisterPage />} />
+      <Route path={routes.admin.url} element={<AdminPage />} />
       <Route path='*' element={<NotFound />} />
     </Routes>
   )

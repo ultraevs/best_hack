@@ -8,6 +8,7 @@ export const routes = {
   login: { url: '/login', title: 'Логин'},
   register: { url: '/register', title: 'Регистрация'},
   profile: { url: '/profile', title: 'Личный кабинет' },
+  admin: { url: '/admin', title: 'Админка' }
 }
 
 export type routesName = keyof typeof routes
