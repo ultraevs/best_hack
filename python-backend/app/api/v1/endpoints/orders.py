@@ -12,8 +12,8 @@ from app.api.v1.schemas.lot import Lot as pLot
 router = APIRouter()
 
 @router.post("/orders/", response_model=Order)
-def create_new_order(order: OrderCreate, db: Session = Depends(get_db)):
-    return create_order(db=db, order=order)
+def create_new_order(order: OrderCreate, db: Session = Depends(get_db), current_user: TokenData = Depends(decode_token)):
+    return create_order(db=db, order=order, current_user=current_user)
 
 
 @router.get("/user/orders/", response_model=list[Order])

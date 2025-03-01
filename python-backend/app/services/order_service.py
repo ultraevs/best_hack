@@ -6,8 +6,13 @@ from app.api.v1.schemas.user import TokenData
 from app.api.v1.schemas.order import OrderCreate, Order
 from app.db.models.order import Order as bOrder
 from app.db.models.lot import Lot
+from datetime import date
 
-def create_order(db: Session, order: OrderCreate):
+def create_order(
+    db: Session,
+    order: OrderCreate,
+    current_user: TokenData
+):
     lot = db.query(Lot).filter(Lot.id == order.lot_id).first()
     if not lot:
         raise HTTPException(status_code=404, detail="Lot not found")
@@ -25,7 +30,11 @@ def create_order(db: Session, order: OrderCreate):
     if lot.available_volume == 0:
         lot.status = "Продан"
     
-    db_order = Order(**order.dict())
+    db_order = bOrder(
+        order_date=date.today(),  
+        client_id=current_user.user_id, 
+        **order.dict(exclude={"client_id"})  
+    )
     db.add(db_order)
     
     db.commit()

@@ -4,14 +4,23 @@ from datetime import date
 class OrderBase(BaseModel):
     order_date: date
     lot_id: int
-    ksss_nb_code: int
-    ksss_fuel_code: int
+    nb_name: str
+    nb_region: str
+    fuel_type: str
     volume: float
     delivery_type: str
+    delivery_address: str
     client_id: int
 
-class OrderCreate(OrderBase):
-    pass
+class OrderCreate(BaseModel):
+    lot_id: int
+    nb_name: str
+    nb_region: str
+    fuel_type: str
+    volume: float
+    delivery_type: str
+    delivery_address: str
+
 
 class Order(OrderBase):
     id: int
