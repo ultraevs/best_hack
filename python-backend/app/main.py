@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from app.api.v1.endpoints import lots, orders, auth
+from app.api.v1.endpoints import lots, orders, auth, user
 from app.db.session import engine
 from app.db.models.base import Base
 from fastapi.middleware.cors import CORSMiddleware
@@ -18,3 +18,4 @@ app.add_middleware(
 app.include_router(lots.router, prefix="/api/v1")
 app.include_router(orders.router, prefix="/api/v1")
 app.include_router(auth.router, prefix="/api/v1")
+app.include_router(user.router, prefix="/api/v1")
