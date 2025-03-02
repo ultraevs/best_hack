@@ -13,7 +13,6 @@ import { useForm, Controller } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { useEffect } from 'react'
 import { CreateLot } from '@/api/lot/lot'
-import { useCookies } from 'react-cookie'
 import { routes } from '@/router/routes'
 
 const Dot = styled.div`
@@ -124,8 +123,6 @@ export type CreateLotFormDataChanged = Omit<
 export function LotPage() {
   const { id } = useParams()
   const navigate = useNavigate()
-  const [cookies] = useCookies(['token'])
-  const token = cookies.token
   const { data: lotData, isLoading, isFetching } = useGetLotDetails(id)
 
   const { control, watch, setValue, handleSubmit } = useForm({
@@ -163,7 +160,7 @@ export function LotPage() {
       volume: Number(data.volume),
     }
     try {
-      const res = await CreateLot(token, newData)
+      const res = await CreateLot(newData)
 
       if (res) {
         notification.success({

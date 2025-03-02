@@ -5,7 +5,7 @@ import {
   PropsWithChildren,
   useContext,
 } from 'react'
-import { useCookies } from 'react-cookie'
+import Cookies from 'js-cookie';
 
 interface IUser {
   sub: string
@@ -33,11 +33,10 @@ export function UserProvider({
   children,
 }: PropsWithChildren<{ initialUser: UserType }>) {
   const [user, setUser] = useState<any>(initialUser)
-  const [_cookies, _setCookie, removeCookie] = useCookies(['token'])
 
   function logout() {
     setUser(null)
-    removeCookie('token', { path: '/' })
+    Cookies.remove('token', { path: '/' })
   }
 
   useEffect(() => {

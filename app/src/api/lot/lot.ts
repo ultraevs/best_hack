@@ -3,16 +3,12 @@ import { CreateLotFormDataChanged } from '@/pages/LotPage/LotPage'
 import { notification } from 'antd'
 
 export const CreateLot = async (
-  token: string,
   data: CreateLotFormDataChanged,
 ) => {
   try {
     const res = await instance({
       url: 'orders',
       method: 'POST',
-      headers: {
-        Authorization: `Bearer ${token}`,
-      },
       data: {
         ...data,
       },

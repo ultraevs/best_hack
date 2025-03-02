@@ -1,6 +1,5 @@
 import instance from '@/api/axiosInstance'
 import { useQuery } from '@tanstack/react-query'
-import { useCookies } from 'react-cookie'
 
 export interface IUserInfo {
   username: string
@@ -9,21 +8,11 @@ export interface IUserInfo {
 }
 
 export function useGetUserInfo() {
-  const [cookies] = useCookies(['token'])
-  const token = cookies.token
-
   const fetchData = async (): Promise<IUserInfo | null> => {
-    if (!token) {
-      throw new Error('Token is required')
-    }
-
     try {
       const res = await instance({
         url: 'user/me',
         method: 'GET',
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
       })
 
       return res.data
@@ -34,7 +23,7 @@ export function useGetUserInfo() {
   }
 
   return useQuery({
-    queryKey: ['fetchUserInfo', token],
+    queryKey: ['fetchUserInfo'],
     queryFn: fetchData,
   })
 }

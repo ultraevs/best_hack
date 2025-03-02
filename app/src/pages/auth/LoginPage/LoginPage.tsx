@@ -9,7 +9,7 @@ import { routes } from '@/router/routes'
 import { LoginUser } from '@/api/auth/auth'
 import { jwtDecode } from 'jwt-decode'
 import { UserType, useUser } from '@/helpers/user/UserProvider'
-import { useCookies } from 'react-cookie'
+import Cookies from 'js-cookie';
 
 import * as S from '@/pages/Auth/AuthPage.styled'
 
@@ -22,7 +22,6 @@ export type LoginFormData = z.infer<typeof loginSchema>
 
 export function LoginPage() {
   const navigate = useNavigate()
-  const [_cookies, setCookie] = useCookies(['token'])
   const { setUser } = useUser()
 
   const {
@@ -42,7 +41,7 @@ export function LoginPage() {
       const res = await LoginUser(data)
 
       const token = res.access_token
-      setCookie('token', token, { path: '/', expires: token.exp })
+      Cookies.set('token', token, { path: '/', expires: token.exp })
 
       const user = jwtDecode(token)
       setUser(user as UserType)

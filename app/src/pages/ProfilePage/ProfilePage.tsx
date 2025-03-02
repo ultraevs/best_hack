@@ -9,7 +9,7 @@ import { IOrder, useGetUserOrders } from '@/utils/hooks/user/useGetUserOrders'
 import { ColumnsType } from 'antd/es/table'
 import styled from 'styled-components'
 import instance from '@/api/axiosInstance'
-import { useCookies } from 'react-cookie'
+import Cookies from 'js-cookie';
 import { useUser } from '@/helpers/user/UserProvider'
 
 const NameText = styled.p`
@@ -35,8 +35,7 @@ const LogoutButton = styled(Button)`
 `
 
 export function ProfilePage() {
-  const [cookies] = useCookies(['token'])
-  const token = cookies.token
+  const token = Cookies.get('token')
 
   const { logout } = useUser()
 
