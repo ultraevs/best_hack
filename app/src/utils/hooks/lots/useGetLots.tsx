@@ -14,6 +14,14 @@ export interface ILot {
   id: number
 }
 
+export interface IFilters {
+  fuel_type: string[]
+  nb_name: string[]
+  nb_region: string[]
+  min_price: number | null
+  max_price: number | null
+}
+
 export function useGetLots() {
   const fetchData = async (): Promise<ILot[] | null> => {
     try {
