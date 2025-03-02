@@ -4,13 +4,41 @@ import { useGetLots } from '@/utils/hooks/lots'
 import { LotCard } from '@/pages/MainPage/components/LotCard'
 
 import * as S from '@/pages/MainPage/MainPage.styled'
+import { useSearchParams } from 'react-router'
+import { useEffect } from 'react'
 
 export function MainPage() {
-  const { data: lotsData, isLoading, isFetching } = useGetLots()
+  const [searchParams] = useSearchParams()
+  const filterKeys = [
+    'search',
+    'regions',
+    'oilTypes',
+    'minVolume',
+    'priceFrom',
+    'priceTo',
+  ]
 
-  if (isLoading || isFetching) {
-    return null
-  }
+  const filters = Object.fromEntries(
+    filterKeys.map(key => [key, searchParams.get(key) ?? null]),
+  )
+
+  const {
+    data: lotsData,
+    isLoading,
+    isFetching,
+    refetch,
+  } = useGetLots({
+    search_query: filters.search,
+    nb_region: filters.regions,
+    fuel_type: filters.oilTypes,
+    min_available_volume: filters.minVolume,
+    min_price: filters.priceFrom,
+    max_price: filters.priceTo,
+  })
+
+  useEffect(() => {
+    refetch()
+  }, [searchParams])
 
   const lots = lotsData ?? []
 
@@ -20,9 +48,16 @@ export function MainPage() {
         Топливо <br /> на lukoil lots.
       </S.Title>
       <Filters />
-      {lots.map(item => (
-        <LotCard lotData={item} />
-      ))}
+      {isLoading || isFetching ? (
+        <div>Loading...</div>
+      ) : (
+        lots.map((item, index) => (
+          <LotCard
+            key={`${item.nb_name}_${item.nb_region}_${index}`}
+            lotData={item}
+          />
+        ))
+      )}
     </Flex>
   )
 }
