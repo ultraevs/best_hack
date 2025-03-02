@@ -9,7 +9,7 @@ import { IOrder, useGetUserOrders } from '@/utils/hooks/user/useGetUserOrders'
 import { ColumnsType } from 'antd/es/table'
 import styled from 'styled-components'
 import instance from '@/api/axiosInstance'
-import Cookies from 'js-cookie';
+import Cookies from 'js-cookie'
 import { useUser } from '@/helpers/user/UserProvider'
 
 const NameText = styled.p`
@@ -72,6 +72,9 @@ export function ProfilePage() {
       })
 
       if (res.data) {
+        notification.success({
+          message: 'Заказ отменен',
+        })
         getUserOrders.refetch()
       }
     } catch (error) {

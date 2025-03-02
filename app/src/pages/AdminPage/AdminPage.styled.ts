@@ -2,6 +2,12 @@ import { Button, Flex } from 'antd'
 import styled from 'styled-components'
 import { colors } from '@/styles/colors'
 
+export const Title = styled.h2`
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 32.78px;
+`
+
 export const UploadContainer = styled(Flex)`
   width: 590px;
   height: 512px;
