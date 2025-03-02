@@ -1,7 +1,9 @@
+from dotenv import load_dotenv
 from fastapi import UploadFile, HTTPException
 import os
 from datetime import datetime
 import logging
+from ftplib import FTP
 
 logging.basicConfig(
     level=logging.INFO,
@@ -12,6 +14,13 @@ logging.basicConfig(
     ]
 )
 logger = logging.getLogger(__name__)
+
+load_dotenv()
+
+FTP_HOST = os.getenv("FTP_HOST")
+FTP_USER = os.getenv("FTP_USER")
+FTP_PASSWORD = os.getenv("FTP_PASSWORD")
+FTP_UPLOAD_DIR = os.getenv("FTP_UPLOAD_DIR", "/uploads")
 
 async def process_csv(file: UploadFile):
     UPLOAD_FOLDER = "csv"
@@ -32,7 +41,21 @@ async def process_csv(file: UploadFile):
         with open(file_path, "wb") as buffer:
             buffer.write(await file.read())
         
-        logger.info(f"File {file.filename} successfully uploaded and saved at {file_path}")
+        logger.info(f"File {file.filename} successfully saved locally at {file_path}")
+        
+        try:
+            ftp = FTP(FTP_HOST)
+            ftp.login(FTP_USER, FTP_PASSWORD)
+            ftp.cwd(FTP_UPLOAD_DIR)
+            
+            with open(file_path, "rb") as file_obj:
+                ftp.storbinary(f"STOR {os.path.basename(file_path)}", file_obj)
+            
+            ftp.quit()
+            logger.info(f"File {file.filename} successfully uploaded to FTP")
+        except Exception as ftp_error:
+            logger.warning(f"Failed to upload file to FTP: {str(ftp_error)}")
+            logger.info("File will be stored locally only.")
         
         return {"message": f"Файл {file.filename} успешно загружен и будет обработан."}
     except Exception as e:
