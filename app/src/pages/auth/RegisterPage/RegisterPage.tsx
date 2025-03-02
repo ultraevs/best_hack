@@ -100,6 +100,7 @@ export function RegisterPage() {
                   {...field}
                   placeholder='Пароль'
                   error={errors.password}
+                  type='password'
                 />
               )}
             />

@@ -15,6 +15,7 @@ interface IInputField {
   onChange: ChangeEventHandler<HTMLInputElement>
   placeholder?: string
   error?: FieldError
+  type?: string
 }
 
 export function InputField({
@@ -22,6 +23,7 @@ export function InputField({
   onChange,
   placeholder = '',
   error,
+  type = 'text',
 }: IInputField) {
   return (
     <Flex vertical gap={4}>
@@ -29,6 +31,7 @@ export function InputField({
         value={value}
         onChange={onChange}
         placeholder={placeholder}
+        type={type}
       />
       {error && <span style={{ color: 'red' }}>{error.message}</span>}
     </Flex>

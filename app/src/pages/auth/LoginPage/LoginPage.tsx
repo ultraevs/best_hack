@@ -86,6 +86,7 @@ export function LoginPage() {
                   {...field}
                   placeholder='Пароль'
                   error={errors.password}
+                  type='password'
                 />
               )}
             />
