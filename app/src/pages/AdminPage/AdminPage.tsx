@@ -2,6 +2,8 @@ import { Flex, Upload, notification } from 'antd'
 import { useState } from 'react'
 import * as S from './AdminPage.styled.ts'
 import axios from 'axios'
+import { routes } from '@/router/routes.ts'
+import { baseURL } from '@/api/axiosInstance.ts'
 
 export function AdminPage() {
   const [file, setFile] = useState<File | null>(null)
@@ -22,7 +24,7 @@ export function AdminPage() {
 
     try {
       const response = await axios.post(
-        'https://shmyaks.ru/api/v1/upload-csv',
+        `${baseURL}/upload-csv`,
         formData,
         {
           headers: {
@@ -49,8 +51,9 @@ export function AdminPage() {
 
   return (
     <Flex vertical gap={32}>
+      <S.Title>{routes.admin.title}</S.Title>
       <Flex vertical justify='space-between' gap={4}>
-        <S.UploadTitle>Загрузка файла</S.UploadTitle>
+        <S.UploadTitle>Загрузка данных через файл</S.UploadTitle>
         <S.UploadContainer align='center' justify='center'>
           {!file && (
             <Upload

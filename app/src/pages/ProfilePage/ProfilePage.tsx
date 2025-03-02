@@ -1,4 +1,5 @@
-import { Button, Flex, Table, notification } from 'antd'
+import { Button, Flex, Spin, Table, notification } from 'antd'
+import { LoadingOutlined } from '@ant-design/icons'
 import { routes } from '@/router/routes'
 import { useGetUserInfo } from '@/utils/hooks/user'
 import { UserInfo } from '@/pages/ProfilePage/components/UserInfo'
@@ -8,7 +9,7 @@ import { IOrder, useGetUserOrders } from '@/utils/hooks/user/useGetUserOrders'
 import { ColumnsType } from 'antd/es/table'
 import styled from 'styled-components'
 import instance from '@/api/axiosInstance'
-import { useCookies } from 'react-cookie'
+import Cookies from 'js-cookie'
 import { useUser } from '@/helpers/user/UserProvider'
 
 const NameText = styled.p`
@@ -34,25 +35,30 @@ const LogoutButton = styled(Button)`
 `
 
 export function ProfilePage() {
-  const [cookies] = useCookies(['token'])
-  const token = cookies.token
+  const token = Cookies.get('token')
 
   const { logout } = useUser()
 
-  const {
-    data: userInfo,
-    isLoading: isUserInfoLoading,
-    isFetching: isUserInfoFetching,
-  } = useGetUserInfo()
+  const getUserInfo = useGetUserInfo()
   const getUserOrders = useGetUserOrders()
 
+  const userInfo = getUserInfo.data
+
   if (
-    isUserInfoLoading ||
-    isUserInfoFetching ||
+    getUserInfo.isLoading ||
+    getUserInfo.isFetching ||
     getUserOrders.isLoading ||
     getUserOrders.isFetching
   ) {
-    return null
+    return (
+      <Flex
+        align='center'
+        justify='center'
+        style={{ width: '100%', height: 300 }}
+      >
+        <Spin indicator={<LoadingOutlined spin />} size='large' />
+      </Flex>
+    )
   }
 
   async function cancelOrder(orderId: number) {
@@ -66,6 +72,9 @@ export function ProfilePage() {
       })
 
       if (res.data) {
+        notification.success({
+          message: 'Заказ отменен',
+        })
         getUserOrders.refetch()
       }
     } catch (error) {

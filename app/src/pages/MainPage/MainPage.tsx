@@ -1,3 +1,5 @@
+import { useEffect } from 'react'
+import { useSearchParams } from 'react-router'
 import { Flex, Spin } from 'antd'
 import { Filters } from '@/pages/MainPage/components/Filters'
 import { useGetLots } from '@/utils/hooks/lots'
@@ -5,8 +7,6 @@ import { LotCard } from '@/pages/MainPage/components/LotCard'
 import { LoadingOutlined } from '@ant-design/icons'
 
 import * as S from '@/pages/MainPage/MainPage.styled'
-import { useSearchParams } from 'react-router'
-import { useEffect } from 'react'
 
 const filterKeys = [
   'search',
