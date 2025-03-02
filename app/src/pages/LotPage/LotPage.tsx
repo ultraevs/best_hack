@@ -165,12 +165,13 @@ export function LotPage() {
       const res = await CreateLot(token, newData)
 
       if (res) {
+        notification.success({
+          message: 'Заказ успешно оформлен',
+        })
         navigate(routes.main.url)
       }
-    } catch {
-      notification.error({
-        message: 'Ошибка при оформлении заказ',
-      })
+    } catch (error) {
+      console.error(error)
     }
   }
 
@@ -210,6 +211,14 @@ export function LotPage() {
                 <Flex gap={8}>
                   <img src={fuelLogo} alt='gavel' />
                   <Text>{lotData?.nb_name}</Text>
+                </Flex>
+                <Flex gap={8}>
+                  <Text>Остаток:</Text>
+                  <Text>{lotData?.available_volume} тонн</Text>
+                </Flex>
+                <Flex gap={8}>
+                  <Text>Цена за тонну:</Text>
+                  <Text>{lotData?.price_per_ton} ₽</Text>
                 </Flex>
               </Flex>
             </ContentWrapper>

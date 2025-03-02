@@ -1,7 +1,7 @@
 import { z } from 'zod'
 import { isDefined } from '@/utils/is-defined'
 import { zodResolver } from '@hookform/resolvers/zod'
-import { Flex, notification } from 'antd'
+import { Flex } from 'antd'
 import { useForm, Controller } from 'react-hook-form'
 import { InputField } from '@/components/form/InputField'
 import { Link, useNavigate } from 'react-router'
@@ -51,9 +51,7 @@ export function LoginPage() {
         navigate(routes.main.url)
       }
     } catch (error) {
-      notification.error({
-        message: 'Ошибка при логине',
-      })
+      console.error(error)
     }
   }
 
