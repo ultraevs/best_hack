@@ -24,7 +24,8 @@ def create_lot(db: Session, lot: LotCreate):
 def get_lots(
     db: Session,
     filters: Dict[str, List[str]],
-    price_range: Optional[tuple[float, float]] = None
+    price_range: Optional[tuple[float, float]] = None,
+    min_available_volume: Optional[float] = None 
 ):
     try:
         query = db.query(Lot)
@@ -45,6 +46,9 @@ def get_lots(
         if price_range:
             min_price, max_price = price_range
             query = query.filter(and_(Lot.price_per_ton >= min_price, Lot.price_per_ton <= max_price))
+
+        if min_available_volume is not None:
+            query = query.filter(Lot.available_volume >= min_available_volume)
 
         lots = query.all()
         logger.info(f"Fetched {len(lots)} lots with filters: {filters}, price_range: {price_range}")

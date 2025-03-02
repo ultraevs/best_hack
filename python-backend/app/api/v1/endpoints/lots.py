@@ -14,6 +14,7 @@ def get_filtered_lots(
     nb_region: List[str] = Query(None),  
     min_price: Optional[float] = Query(None),
     max_price: Optional[float] = Query(None),
+    min_available_volume: Optional[float] = Query(None),
     search_query: Optional[str] = Query(None),
     db: Session = Depends(get_db)
 ):
@@ -32,7 +33,7 @@ def get_filtered_lots(
     if min_price is not None or max_price is not None:
         price_range = (min_price or 0, max_price or float('inf')) 
 
-    lots = get_lots(db, filters=filters, price_range=price_range)
+    lots = get_lots(db, filters=filters, price_range=price_range, min_available_volume=min_available_volume)
     return lots
 
 @router.get("/lots/{lot_id}", response_model=Lot)
