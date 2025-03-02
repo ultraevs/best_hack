@@ -5,7 +5,7 @@ from app.db.session import get_db
 from app.services.lot_service import get_lots, get_lot, search_lots
 from app.api.v1.schemas.lot import Lot
 
-router = APIRouter()
+router = APIRouter(tags=["Lots"])
 
 @router.get("/lots/", response_model=List[Lot])
 def get_filtered_lots(

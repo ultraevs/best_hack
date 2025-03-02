@@ -9,7 +9,7 @@ from app.db.models.order import Order as bOrder
 from app.db.models.lot import Lot
 from app.api.v1.schemas.lot import Lot as pLot
 
-router = APIRouter()
+router = APIRouter(tags=["Orders"])
 
 @router.post("/orders/", response_model=Order)
 def create_new_order(order: OrderCreate, db: Session = Depends(get_db), current_user: TokenData = Depends(decode_token)):

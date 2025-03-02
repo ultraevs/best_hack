@@ -5,7 +5,7 @@ from app.db.session import get_db
 from app.api.v1.schemas.user import UserCreate, Token, LoginRequest
 from app.api.v1.schemas.user import Token
 from app.services.auth import register_service, login_service
-router = APIRouter()
+router = APIRouter(tags=["Auth"])
 
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="token")
 
