@@ -8,17 +8,18 @@ import * as S from '@/pages/MainPage/MainPage.styled'
 import { useSearchParams } from 'react-router'
 import { useEffect } from 'react'
 
+const filterKeys = [
+  'search',
+  'regions',
+  'oilTypes',
+  'minVolume',
+  'priceFrom',
+  'priceTo',
+]
+
 export function MainPage() {
   const [searchParams] = useSearchParams()
-  const filterKeys = [
-    'search',
-    'regions',
-    'oilTypes',
-    'minVolume',
-    'priceFrom',
-    'priceTo',
-  ]
-
+  
   const filters = Object.fromEntries(
     filterKeys.map(key => [key, searchParams.get(key) ?? null]),
   )

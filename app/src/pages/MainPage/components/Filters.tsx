@@ -49,14 +49,17 @@ const PriceInput = styled(Input)`
   width: 130px;
 `
 
+const filterKeys = ['search', 'minVolume', 'priceFrom', 'priceTo']
+
 export function Filters() {
   const { data: lotsFilters } = useGetLotsFilters()
   const [searchParams, setSearchParams] = useSearchParams()
 
-  const search = searchParams.get('search')
-  const minVolume = searchParams.get('minVolume')
-  const priceFrom = searchParams.get('priceFrom')
-  const priceTo = searchParams.get('priceTo')
+  const filters = Object.fromEntries(
+    filterKeys.map(key => [key, searchParams.get(key) ?? null]),
+  )
+
+  const { search, minVolume, priceFrom, priceTo } = filters
 
   const handleParamChange = (key: string, value: string) => {
     if (!value && searchParams.has(key)) {
