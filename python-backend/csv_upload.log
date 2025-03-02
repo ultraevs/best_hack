@@ -151,3 +151,6 @@ ftplib.error_perm: 530 Login incorrect.
 2025-03-02 05:59:17,054 - apscheduler.scheduler - INFO - Scheduler started
 2025-03-02 05:59:29,570 - app.services.lot_service - INFO - Fetched 2 lots with filters: {}, price_range: None
 2025-03-02 05:59:39,230 - app.services.lot_service - INFO - Fetched 1 lots with filters: {}, price_range: None
+2025-03-02 08:17:48,087 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-03-02 08:17:48,088 - apscheduler.scheduler - INFO - Added job "monitor_csv_folder" to job store "default"
+2025-03-02 08:17:48,088 - apscheduler.scheduler - INFO - Scheduler started
