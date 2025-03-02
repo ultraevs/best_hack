@@ -1,6 +1,7 @@
 import { useNavigate, useParams } from 'react-router'
 import { useGetLotDetails } from '@/utils/hooks/lots/useGetLotDetails'
-import { Button, Flex, Input, notification } from 'antd'
+import { Button, Flex, Input, notification, Spin } from 'antd'
+import { LoadingOutlined } from '@ant-design/icons'
 import styled from 'styled-components'
 import { colors } from '@/styles/colors'
 import lotLogo from '@/assets/gavel.svg'
@@ -176,7 +177,15 @@ export function LotPage() {
   }
 
   if (isLoading || isFetching) {
-    return null
+    return (
+      <Flex
+        align='center'
+        justify='center'
+        style={{ width: '100%', height: 300 }}
+      >
+        <Spin indicator={<LoadingOutlined spin />} size='large' />
+      </Flex>
+    )
   }
 
   return (

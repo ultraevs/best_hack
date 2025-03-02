@@ -1,4 +1,5 @@
-import { Button, Flex, Table, notification } from 'antd'
+import { Button, Flex, Spin, Table, notification } from 'antd'
+import { LoadingOutlined } from '@ant-design/icons'
 import { routes } from '@/router/routes'
 import { useGetUserInfo } from '@/utils/hooks/user'
 import { UserInfo } from '@/pages/ProfilePage/components/UserInfo'
@@ -52,7 +53,15 @@ export function ProfilePage() {
     getUserOrders.isLoading ||
     getUserOrders.isFetching
   ) {
-    return null
+    return (
+      <Flex
+        align='center'
+        justify='center'
+        style={{ width: '100%', height: 300 }}
+      >
+        <Spin indicator={<LoadingOutlined spin />} size='large' />
+      </Flex>
+    )
   }
 
   async function cancelOrder(orderId: number) {
