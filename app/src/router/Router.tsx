@@ -24,7 +24,14 @@ export function Router() {
       <Route path={routes.login.url} element={<LoginPage />} />
       <Route path={routes.register.url} element={<RegisterPage />} />
       <Route path={routes.register.url} element={<RegisterPage />} />
-      <Route path={routes.admin.url} element={<AdminPage />} />
+      <Route
+        path={routes.admin.url}
+        element={
+          <PrivateRoute>
+            <AdminPage />
+          </PrivateRoute>
+        }
+      />
       <Route path={`${routes.lot.url}/:id`} element={<LotPage />} />
       <Route path='*' element={<NotFound />} />
     </Routes>
