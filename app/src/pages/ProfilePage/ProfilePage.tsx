@@ -40,16 +40,14 @@ export function ProfilePage() {
 
   const { logout } = useUser()
 
-  const {
-    data: userInfo,
-    isLoading: isUserInfoLoading,
-    isFetching: isUserInfoFetching,
-  } = useGetUserInfo()
+  const getUserInfo = useGetUserInfo()
   const getUserOrders = useGetUserOrders()
 
+  const userInfo = getUserInfo.data
+
   if (
-    isUserInfoLoading ||
-    isUserInfoFetching ||
+    getUserInfo.isLoading ||
+    getUserInfo.isFetching ||
     getUserOrders.isLoading ||
     getUserOrders.isFetching
   ) {
