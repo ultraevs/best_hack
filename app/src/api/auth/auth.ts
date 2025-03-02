@@ -1,6 +1,6 @@
 import instance from '@/api/axiosInstance'
-import { LoginFormData } from '@/pages/Auth/LoginPage/LoginPage'
-import { RegisterFormData } from '@/pages/Auth/RegisterPage/RegisterPage'
+import { LoginFormData } from '@/pages/auth/LoginPage/LoginPage'
+import { RegisterFormData } from '@/pages/auth/RegisterPage/RegisterPage'
 import { notification } from 'antd'
 
 export const LoginUser = async (data: LoginFormData) => {
