@@ -14,8 +14,12 @@ def get_filtered_lots(
     nb_region: List[str] = Query(None),  
     min_price: Optional[float] = Query(None),
     max_price: Optional[float] = Query(None),
+    search_query: Optional[str] = Query(None),
     db: Session = Depends(get_db)
 ):
+    if search_query is not None:
+        lots = search_lots(db, search_query)
+        return lots
     filters = {
         "fuel_type": fuel_type,
         "nb_name": nb_name,
@@ -37,11 +41,3 @@ def read_lot(lot_id: int, db: Session = Depends(get_db)):
     if lot is None:
         raise HTTPException(status_code=404, detail="Lot not found")
     return lot
-
-@router.get("/search-lots/", response_model=List[Lot])
-def search_lots_endpoint(
-    search_query: str = Query(..., description="Строка поиска"),
-    db: Session = Depends(get_db)
-):
-    lots = search_lots(db, search_query)
-    return lots

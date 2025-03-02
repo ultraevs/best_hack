@@ -137,3 +137,12 @@ ftplib.error_perm: 530 Login incorrect.
 2025-03-02 04:15:36,962 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
 2025-03-02 04:15:36,962 - apscheduler.scheduler - INFO - Added job "monitor_csv_folder" to job store "default"
 2025-03-02 04:15:36,962 - apscheduler.scheduler - INFO - Scheduler started
+2025-03-02 05:49:12,817 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-03-02 05:49:12,818 - apscheduler.scheduler - INFO - Added job "monitor_csv_folder" to job store "default"
+2025-03-02 05:49:12,818 - apscheduler.scheduler - INFO - Scheduler started
+2025-03-02 05:49:27,491 - app.services.lot_service - INFO - Search completed - Query: АИ-95, Results: 1
+2025-03-02 05:49:33,677 - app.services.lot_service - INFO - Search completed - Query: АИ-95 Москва, Results: 2
+2025-03-02 05:49:45,175 - app.services.lot_service - INFO - Search completed - Query: АИ-95 Москва, Results: 2
+2025-03-02 05:49:49,913 - app.services.lot_service - INFO - Fetched 0 lots with filters: {'fuel_type': ['92']}, price_range: None
+2025-03-02 05:49:54,754 - app.services.lot_service - INFO - Fetched 0 lots with filters: {'fuel_type': ['95']}, price_range: None
+2025-03-02 05:50:36,329 - app.services.lot_service - INFO - Fetched 1 lots with filters: {'fuel_type': ['АИ-95']}, price_range: None

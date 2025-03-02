@@ -1,4 +1,4 @@
-from fastapi import APIRouter, Depends, HTTPException
+from fastapi import APIRouter, Depends
 from sqlalchemy.orm import Session
 from app.db.session import get_db
 from app.services.order_service import create_order, delete_order
@@ -6,8 +6,6 @@ from app.api.v1.schemas.user import TokenData
 from app.core.security import decode_token
 from app.api.v1.schemas.order import OrderCreate, Order
 from app.db.models.order import Order as bOrder
-from app.db.models.lot import Lot
-from app.api.v1.schemas.lot import Lot as pLot
 
 router = APIRouter(tags=["Orders"])
 
