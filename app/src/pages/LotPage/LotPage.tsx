@@ -1,9 +1,7 @@
 import { useNavigate, useParams } from 'react-router'
 import { useGetLotDetails } from '@/utils/hooks/lots/useGetLotDetails'
-import { Button, Flex, Input, notification, Spin } from 'antd'
+import { Flex, notification, Spin } from 'antd'
 import { LoadingOutlined } from '@ant-design/icons'
-import styled from 'styled-components'
-import { colors } from '@/styles/colors'
 import lotLogo from '@/assets/gavel.svg'
 import mapPinLogo from '@/assets/map-pin.svg'
 import fuelLogo from '@/assets/fuel.svg'
@@ -15,98 +13,7 @@ import { useEffect } from 'react'
 import { CreateLot } from '@/api/lot/lot'
 import { routes } from '@/router/routes'
 
-const Dot = styled.div`
-  margin-top: 4.5px;
-  width: 24px;
-  height: 24px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: ${colors.white};
-  border-radius: 999px;
-
-  span {
-    color: ${colors.primaryGray};
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 19.12px;
-  }
-`
-
-const Vertical = styled.div`
-  width: 1px;
-  height: 100%;
-  background: #d3d3d3;
-`
-
-const ContentWrapper = styled(Flex)`
-  width: 301px;
-  background: ${colors.white};
-  border-radius: 6px;
-  padding: 16px 32px 32px;
-`
-
-const DeliveryWrapper = styled(Flex)`
-  width: 400px;
-  background: ${colors.white};
-  border-radius: 6px;
-  padding: 16px 32px;
-`
-
-const SectionTitle = styled.p`
-  color: ${colors.primaryBlack};
-  font-weight: 500;
-  font-size: 24px;
-  line-height: 32.78px;
-`
-
-const TitleText = styled.p`
-  color: ${colors.primaryBlack};
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 32.78px;
-  line-height: 27.32px;
-`
-
-const Text = styled.p`
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 21.86px;
-`
-
-const VolumeInput = styled(Input)`
-  width: 164px;
-  height: 44px;
-`
-
-const AddressInput = styled(Input)`
-  height: 44px;
-`
-
-interface DeliveryTabProps {
-  isSelected: boolean
-}
-
-const DeliveryTab = styled.div<DeliveryTabProps>`
-  width: fit-content;
-  background: ${colors.white};
-  border-radius: 6px;
-  padding: 6px 16px;
-  cursor: pointer;
-  background-color: ${props => (props.isSelected ? colors.white : '#F1F1F1')};
-`
-
-const DeliveryTabText = styled.p`
-  color: #000000b2;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 21.86px;
-`
-
-const SubmitButton = styled(Button)`
-  width: fit-content;
-  height: 31px;
-`
+import * as S from '@/pages/LotPage/LotPage.styled'
 
 const createLotSchema = z.object({
   lot_id: z.number().refine(isDefined, 'Обязательное поле'),
@@ -200,57 +107,57 @@ export function LotPage() {
       <Flex vertical gap={24}>
         <Flex gap={16}>
           <Flex align='center' vertical gap={8}>
-            <Dot>
+            <S.Dot>
               <span>1</span>
-            </Dot>
-            <Vertical />
+            </S.Dot>
+            <S.Vertical />
           </Flex>
           <Flex vertical gap={16}>
-            <SectionTitle>Подробности заказа</SectionTitle>
-            <ContentWrapper vertical gap={12}>
-              <TitleText>{lotData?.fuel_type}</TitleText>
+            <S.SectionTitle>Подробности заказа</S.SectionTitle>
+            <S.ContentWrapper vertical gap={12}>
+              <S.TitleText>{lotData?.fuel_type}</S.TitleText>
               <Flex vertical gap={8}>
                 <Flex gap={8}>
                   <img src={lotLogo} alt='gavel' />
-                  <Text>№ {lotData?.id}</Text>
+                  <S.Text>№ {lotData?.id}</S.Text>
                 </Flex>
                 <Flex gap={8}>
                   <img src={mapPinLogo} alt='gavel' />
-                  <Text>{lotData?.nb_region}</Text>
+                  <S.Text>{lotData?.nb_region}</S.Text>
                 </Flex>
                 <Flex gap={8}>
                   <img src={fuelLogo} alt='gavel' />
-                  <Text>{lotData?.nb_name}</Text>
+                  <S.Text>{lotData?.nb_name}</S.Text>
                 </Flex>
                 <Flex gap={8}>
-                  <Text>Остаток:</Text>
-                  <Text>{lotData?.available_volume} тонн</Text>
+                  <S.Text>Остаток:</S.Text>
+                  <S.Text>{lotData?.available_volume} тонн</S.Text>
                 </Flex>
                 <Flex gap={8}>
-                  <Text>Цена за тонну:</Text>
-                  <Text>{lotData?.price_per_ton} ₽</Text>
+                  <S.Text>Цена за тонну:</S.Text>
+                  <S.Text>{lotData?.price_per_ton} ₽</S.Text>
                 </Flex>
               </Flex>
-            </ContentWrapper>
+            </S.ContentWrapper>
           </Flex>
         </Flex>
         <Flex gap={16}>
           <Flex align='center' vertical gap={8}>
-            <Dot>
+            <S.Dot>
               <span>2</span>
-            </Dot>
-            <Vertical />
+            </S.Dot>
+            <S.Vertical />
           </Flex>
           <Flex vertical gap={16}>
-            <SectionTitle>Расчет стоимости (в литрах)</SectionTitle>
+            <S.SectionTitle>Расчет стоимости (в литрах)</S.SectionTitle>
             <Flex vertical gap={12}>
               <Flex vertical gap={4}>
-                <Text>Тонн требуется:</Text>
+                <S.Text>Тонн требуется:</S.Text>
                 <Controller
                   control={control}
                   name='volume'
                   render={({ field }) => (
-                    <VolumeInput
+                    <S.VolumeInput
                       value={field.value ?? ''}
                       onChange={field.onChange}
                       placeholder='100'
@@ -259,8 +166,8 @@ export function LotPage() {
                 />
               </Flex>
               <Flex vertical gap={4}>
-                <Text>Итого:</Text>
-                <VolumeInput
+                <S.Text>Итого:</S.Text>
+                <S.VolumeInput
                   value={
                     volumeWatch && lotData?.price_per_ton
                       ? `${(
@@ -277,41 +184,41 @@ export function LotPage() {
         </Flex>
         <Flex gap={16}>
           <Flex align='center' vertical gap={8}>
-            <Dot>
+            <S.Dot>
               <span>3</span>
-            </Dot>
-            <Vertical />
+            </S.Dot>
+            <S.Vertical />
           </Flex>
           <Flex vertical gap={16}>
-            <SectionTitle>Выберите способ получения</SectionTitle>
+            <S.SectionTitle>Выберите способ получения</S.SectionTitle>
             <Flex gap={12}>
-              <DeliveryTab
+              <S.DeliveryTab
                 isSelected={deliveryTypeWatch === 'pickup'}
                 onClick={() => changeDeliveryType('pickup')}
               >
-                <DeliveryTabText>Самовывоз</DeliveryTabText>
-              </DeliveryTab>
-              <DeliveryTab
+                <S.DeliveryTabText>Самовывоз</S.DeliveryTabText>
+              </S.DeliveryTab>
+              <S.DeliveryTab
                 isSelected={deliveryTypeWatch === 'delivery'}
                 onClick={() => changeDeliveryType('delivery')}
               >
-                <DeliveryTabText>Доставка</DeliveryTabText>
-              </DeliveryTab>
+                <S.DeliveryTabText>Доставка</S.DeliveryTabText>
+              </S.DeliveryTab>
             </Flex>
-            <DeliveryWrapper vertical gap={12}>
+            <S.DeliveryWrapper vertical gap={12}>
               {deliveryTypeWatch === 'pickup' ? (
                 <Flex vertical gap={2}>
-                  <TitleText>{lotData?.nb_name}</TitleText>
-                  <Text>Ежедневно с 9:00 до 22:00</Text>
+                  <S.TitleText>{lotData?.nb_name}</S.TitleText>
+                  <S.Text>Ежедневно с 9:00 до 22:00</S.Text>
                 </Flex>
               ) : (
                 <Flex vertical gap={12}>
-                  <TitleText>Введите адрес</TitleText>
+                  <S.TitleText>Введите адрес</S.TitleText>
                   <Controller
                     control={control}
                     name='delivery_address'
                     render={({ field }) => (
-                      <AddressInput
+                      <S.AddressInput
                         value={field.value ?? ''}
                         onChange={field.onChange}
                         placeholder='Москва, Ленинский пр-кт, дом 52'
@@ -320,11 +227,11 @@ export function LotPage() {
                   />
                 </Flex>
               )}
-            </DeliveryWrapper>
+            </S.DeliveryWrapper>
           </Flex>
         </Flex>
       </Flex>
-      <SubmitButton htmlType='submit'>Оформить заказ</SubmitButton>
+      <S.SubmitButton htmlType='submit'>Оформить заказ</S.SubmitButton>
     </Flex>
   )
 }
