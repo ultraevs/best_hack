@@ -1,7 +1,8 @@
-import { Flex } from 'antd'
+import { Flex, Spin } from 'antd'
 import { Filters } from '@/pages/MainPage/components/Filters'
 import { useGetLots } from '@/utils/hooks/lots'
 import { LotCard } from '@/pages/MainPage/components/LotCard'
+import { LoadingOutlined } from '@ant-design/icons'
 
 import * as S from '@/pages/MainPage/MainPage.styled'
 import { useSearchParams } from 'react-router'
@@ -49,7 +50,9 @@ export function MainPage() {
       </S.Title>
       <Filters />
       {isLoading || isFetching ? (
-        <div>Loading...</div>
+        <Flex align='center' justify='center' style={{ width: '100%', height: 300 }}>
+          <Spin indicator={<LoadingOutlined spin />} size='large' />
+        </Flex>
       ) : (
         lots.map((item, index) => (
           <LotCard
