@@ -1,12 +1,12 @@
 version: "3.3"
 
 services:
-  #frontend:
-  #  build:
-  #    context: ../inno-front/
-  #    dockerfile: Dockerfile
-  #  ports:
-  #    - "5173:5173"
+  frontend:
+    build:
+      context: ../app/
+      dockerfile: Dockerfile
+    ports:
+      - "5173:5173"
   backend:
     build:
       context: ../python-backend/
