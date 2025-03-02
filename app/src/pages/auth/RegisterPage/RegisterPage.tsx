@@ -11,7 +11,7 @@ import { jwtDecode } from 'jwt-decode'
 import { UserType, useUser } from '@/helpers/user/UserProvider'
 import { useCookies } from 'react-cookie'
 
-import * as S from '@/pages/Auth/AuthPage.styled'
+import * as S from '@/pages/auth/AuthPage.styled'
 
 const loginSchema = z.object({
   username: z.string().refine(isDefined, 'Обязательное поле'),
