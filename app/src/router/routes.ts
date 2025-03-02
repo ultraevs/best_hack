@@ -1,8 +1,3 @@
-// interface IRoute {
-//     url: string
-//     title: string
-// }
-
 export const routes = {
   main: { url: '/', title: 'Главная' },
   login: { url: '/login', title: 'Логин' },
@@ -11,5 +6,3 @@ export const routes = {
   admin: { url: '/admin', title: 'Админка' },
   lot: { url: '/lot', title: 'Лот' },
 }
-
-export type routesName = keyof typeof routes

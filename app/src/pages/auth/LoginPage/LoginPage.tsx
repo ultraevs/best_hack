@@ -1,7 +1,7 @@
 import { z } from 'zod'
 import { isDefined } from '@/utils/is-defined'
 import { zodResolver } from '@hookform/resolvers/zod'
-import { Flex } from 'antd'
+import { Flex, notification } from 'antd'
 import { useForm, Controller } from 'react-hook-form'
 import { InputField } from '@/components/form/InputField'
 import { Link, useNavigate } from 'react-router'
@@ -48,6 +48,9 @@ export function LoginPage() {
       setUser(user as UserType)
 
       if (user) {
+        notification.success({
+          message: 'Вы успешно вошли в систему'
+        })
         navigate(routes.main.url)
       }
     } catch (error) {

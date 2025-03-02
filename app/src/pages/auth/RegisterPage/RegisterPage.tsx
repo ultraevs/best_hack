@@ -49,6 +49,9 @@ export function RegisterPage() {
       setUser(user as UserType)
 
       if (user) {
+        notification.success({
+          message: 'Вы успешно зарегистрировались',
+        })
         navigate(routes.main.url)
       }
     } catch (error) {

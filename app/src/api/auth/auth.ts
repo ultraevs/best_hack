@@ -17,7 +17,7 @@ export const LoginUser = async (data: LoginFormData) => {
   } catch (error) {
     console.error('Error during login:', error)
     notification.error({
-      message: 'Ошибка при логине',
+      message: 'Ошибка при входе',
     })
   }
 }
