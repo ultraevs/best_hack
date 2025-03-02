@@ -3,7 +3,7 @@ import { Button } from 'antd'
 import { colors } from '@/styles/colors'
 
 export const Content = styled.div`
-  height: calc(100vh - 72px);
+  height: calc(100vh - 96px);
   display: flex;
   flex: 1;
   align-items: center;

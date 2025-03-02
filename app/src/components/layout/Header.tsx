@@ -6,13 +6,19 @@ import { routes } from '@/router/routes'
 import styled from 'styled-components'
 import { colors } from '@/styles/colors'
 
-const Wrapper = styled.header`
+const Wrapper = styled(Flex)`
+  z-index: 1000;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background: ${colors.white};
+`
+
+const HeaderWrapper = styled.header`
   max-width: 1440px;
   width: 100%;
   height: 72px;
   padding: 20px 120px;
-  position: sticky;
-  top: 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -33,21 +39,23 @@ export function Header() {
   const { user } = useUser()
 
   return (
-    <Wrapper>
-      <StyledNavLink to={routes.main.url}>
-        <img src={logo} alt='logo' />
-      </StyledNavLink>
+    <Wrapper justify='center'>
+      <HeaderWrapper>
+        <StyledNavLink to={routes.main.url}>
+          <img src={logo} alt='logo' />
+        </StyledNavLink>
 
-      {user && (
-        <Flex align='center' gap={32}>
-          <StyledNavLink to={routes.main.url}>
-            {routes.main.title}
-          </StyledNavLink>
-          <StyledNavLink to={routes.profile.url}>
-            {routes.profile.title}
-          </StyledNavLink>
-        </Flex>
-      )}
+        {user && (
+          <Flex align='center' gap={32}>
+            <StyledNavLink to={routes.main.url}>
+              {routes.main.title}
+            </StyledNavLink>
+            <StyledNavLink to={routes.profile.url}>
+              {routes.profile.title}
+            </StyledNavLink>
+          </Flex>
+        )}
+      </HeaderWrapper>
     </Wrapper>
   )
 }

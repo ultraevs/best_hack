@@ -2,6 +2,7 @@ import { useSearchParams } from 'react-router'
 import styled from 'styled-components'
 import { Dropdown, Flex, Input, Select } from 'antd'
 import { useGetLotsFilters } from '@/utils/hooks/lots'
+import { colors } from '@/styles/colors'
 
 const SearchInput = styled(Input.Search)`
   width: 320px;
@@ -23,6 +24,7 @@ const PriceWrapper = styled.div`
   width: 320px;
   height: 32px;
   padding: 0 8px;
+  background: ${colors.white};
   border-radius: 6px;
   border: 1px solid #d9d9d9;
   display: flex;
@@ -38,6 +40,7 @@ const PriceWrapper = styled.div`
 
 const PriceDropdown = styled.div`
   padding: 16px;
+  background: ${colors.white};
   border-radius: 6px;
   border: 1px solid #d9d9d9;
 `

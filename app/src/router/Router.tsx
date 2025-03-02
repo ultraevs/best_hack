@@ -7,6 +7,7 @@ import { NotFound } from '@/pages/NotFound'
 import { LoginPage } from '@/pages/Auth/LoginPage'
 import { RegisterPage } from '@/pages/Auth/RegisterPage'
 import { AdminPage } from '@/pages/AdminPage'
+import { LotPage } from '@/pages/LotPage'
 
 export function Router() {
   return (
@@ -24,6 +25,7 @@ export function Router() {
       <Route path={routes.register.url} element={<RegisterPage />} />
       <Route path={routes.register.url} element={<RegisterPage />} />
       <Route path={routes.admin.url} element={<AdminPage />} />
+      <Route path={`${routes.lot.url}/:id`} element={<LotPage />} />
       <Route path='*' element={<NotFound />} />
     </Routes>
   )

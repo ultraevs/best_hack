@@ -6,7 +6,7 @@ import { Flex } from 'antd'
 const Main = styled.main`
   max-width: 1440px;
   width: 100%;
-  padding: 0 120px;
+  padding: 24px 120px 0;
 `
 
 export function Layout({ children }: PropsWithChildren) {

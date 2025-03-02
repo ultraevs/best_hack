@@ -15,7 +15,7 @@ export function MainPage() {
   const lots = lotsData ?? []
 
   return (
-    <Flex vertical gap={32}>
+    <Flex vertical gap={32} style={{ marginBottom: 64 }}>
       <S.Title>
         Топливо <br /> на lukoil lots.
       </S.Title>

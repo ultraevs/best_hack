@@ -5,6 +5,7 @@ export interface ILot {
   date: string
   fuel_type: string
   nb_name: string
+  nb_region: string
   start_weight: number
   available_volume: number
   status: string

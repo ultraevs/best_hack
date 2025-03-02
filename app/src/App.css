@@ -8,6 +8,7 @@
 
 body {
   font-family: 'Manrope', serif;
+  overscroll-behavior: none;
   height: 100vh;
-  background: '#F7F7F7';
+  background: #F7F7F7;
 }
