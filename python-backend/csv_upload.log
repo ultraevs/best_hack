@@ -15,3 +15,9 @@
 2025-03-02 03:00:41,123 - apscheduler.scheduler - INFO - Added job "monitor_csv_folder" to job store "default"
 2025-03-02 03:00:41,123 - apscheduler.scheduler - INFO - Scheduler started
 2025-03-02 03:00:44,073 - app.services.order_service - INFO - Order created successfully - Order ID: 8, Lot ID: 1, Client ID: 1, Volume: 0.0
+2025-03-02 03:25:34,149 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-03-02 03:25:34,150 - apscheduler.scheduler - INFO - Added job "monitor_csv_folder" to job store "default"
+2025-03-02 03:25:34,150 - apscheduler.scheduler - INFO - Scheduler started
+2025-03-02 03:25:59,635 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-03-02 03:25:59,636 - apscheduler.scheduler - INFO - Added job "monitor_csv_folder" to job store "default"
+2025-03-02 03:25:59,636 - apscheduler.scheduler - INFO - Scheduler started
