@@ -15,7 +15,7 @@ app = FastAPI(
         "name": "MIT",
     },
     docs_url="/api/v1/docs",
-    openapi_url="/api/v1/docs/openapi.json"
+    openapi_url="/api/v1/docs/openapi.json",
     swagger_ui_parameters={"syntaxHighlight.theme": "monokai", "theme": "dark",}
 )
 @app.on_event("startup")
