@@ -13,3 +13,4 @@ apscheduler
 pandas
 httpx
 pytest
+pyftpdlib

@@ -10,6 +10,9 @@ def decode_ksss_fuel_code(ksss_fuel_code: int) -> str:
         95: "АИ-95",
         92: "АИ-92",
         100: "АИ-100",
-        98: "АИ-98"
+        98: "АИ-98",
+        951: "АИ-95 Экто",
+        921: "АИ-92 Экто",
+        00: "ДТ"
     }
     return fuel_type_map.get(ksss_fuel_code, "Неизвестное топливо")

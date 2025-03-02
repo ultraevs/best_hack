@@ -7,8 +7,16 @@ from app.scheduler.scheduler import start_scheduler
 
 Base.metadata.create_all(bind=engine)
 
-app = FastAPI()
-
+app = FastAPI(
+    title="SHMYAKS API",
+    description="API для веб-сервиса по продаже остатков топлива",
+    version="1.0.0",
+    license_info={
+        "name": "MIT",
+    },
+    docs_url="/api/v1/docs",
+    swagger_ui_parameters={"syntaxHighlight.theme": "monokai", "theme": "dark",}
+)
 @app.on_event("startup")
 def startup_event():
     start_scheduler()

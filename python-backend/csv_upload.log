@@ -21,3 +21,133 @@
 2025-03-02 03:25:59,635 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
 2025-03-02 03:25:59,636 - apscheduler.scheduler - INFO - Added job "monitor_csv_folder" to job store "default"
 2025-03-02 03:25:59,636 - apscheduler.scheduler - INFO - Scheduler started
+2025-03-02 03:36:15,366 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-03-02 03:36:15,367 - apscheduler.scheduler - INFO - Added job "monitor_csv_folder" to job store "default"
+2025-03-02 03:36:15,367 - apscheduler.scheduler - INFO - Scheduler started
+2025-03-02 03:37:24,887 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-03-02 03:37:24,887 - apscheduler.scheduler - INFO - Added job "monitor_csv_folder" to job store "default"
+2025-03-02 03:37:24,887 - apscheduler.scheduler - INFO - Scheduler started
+2025-03-02 03:37:27,677 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-03-02 03:37:27,677 - apscheduler.scheduler - INFO - Added job "monitor_csv_folder" to job store "default"
+2025-03-02 03:37:27,678 - apscheduler.scheduler - INFO - Scheduler started
+2025-03-02 03:37:47,118 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-03-02 03:37:47,118 - apscheduler.scheduler - INFO - Added job "monitor_csv_folder" to job store "default"
+2025-03-02 03:37:47,118 - apscheduler.scheduler - INFO - Scheduler started
+2025-03-02 03:37:57,059 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-03-02 03:37:57,060 - apscheduler.scheduler - INFO - Added job "monitor_csv_folder" to job store "default"
+2025-03-02 03:37:57,060 - apscheduler.scheduler - INFO - Scheduler started
+2025-03-02 03:38:12,889 - app.services.lot_service - INFO - Fetched 3 lots with filters: {}, price_range: None
+2025-03-02 03:39:07,387 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-03-02 03:39:07,388 - apscheduler.scheduler - INFO - Added job "monitor_csv_folder" to job store "default"
+2025-03-02 03:39:07,388 - apscheduler.scheduler - INFO - Scheduler started
+2025-03-02 03:39:33,720 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-03-02 03:39:33,721 - apscheduler.scheduler - INFO - Added job "monitor_csv_folder" to job store "default"
+2025-03-02 03:39:33,721 - apscheduler.scheduler - INFO - Scheduler started
+2025-03-02 03:43:43,108 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-03-02 03:43:43,108 - apscheduler.scheduler - INFO - Added job "monitor_csv_folder" to job store "default"
+2025-03-02 03:43:43,108 - apscheduler.scheduler - INFO - Scheduler started
+2025-03-02 03:43:50,886 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-03-02 03:43:50,886 - apscheduler.scheduler - INFO - Added job "monitor_csv_folder" to job store "default"
+2025-03-02 03:43:50,887 - apscheduler.scheduler - INFO - Scheduler started
+2025-03-02 03:43:53,766 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-03-02 03:43:53,767 - apscheduler.scheduler - INFO - Added job "monitor_csv_folder" to job store "default"
+2025-03-02 03:43:53,767 - apscheduler.scheduler - INFO - Scheduler started
+2025-03-02 03:43:55,771 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-03-02 03:43:55,772 - apscheduler.scheduler - INFO - Added job "monitor_csv_folder" to job store "default"
+2025-03-02 03:43:55,772 - apscheduler.scheduler - INFO - Scheduler started
+2025-03-02 03:43:57,870 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-03-02 03:43:57,871 - apscheduler.scheduler - INFO - Added job "monitor_csv_folder" to job store "default"
+2025-03-02 03:43:57,871 - apscheduler.scheduler - INFO - Scheduler started
+2025-03-02 03:44:00,315 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-03-02 03:44:00,315 - apscheduler.scheduler - INFO - Added job "monitor_csv_folder" to job store "default"
+2025-03-02 03:44:00,315 - apscheduler.scheduler - INFO - Scheduler started
+2025-03-02 03:44:02,234 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-03-02 03:44:02,235 - apscheduler.scheduler - INFO - Added job "monitor_csv_folder" to job store "default"
+2025-03-02 03:44:02,235 - apscheduler.scheduler - INFO - Scheduler started
+2025-03-02 03:44:04,754 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-03-02 03:44:04,754 - apscheduler.scheduler - INFO - Added job "monitor_csv_folder" to job store "default"
+2025-03-02 03:44:04,754 - apscheduler.scheduler - INFO - Scheduler started
+2025-03-02 03:44:07,060 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-03-02 03:44:07,061 - apscheduler.scheduler - INFO - Added job "monitor_csv_folder" to job store "default"
+2025-03-02 03:44:07,061 - apscheduler.scheduler - INFO - Scheduler started
+2025-03-02 03:44:09,278 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-03-02 03:44:09,278 - apscheduler.scheduler - INFO - Added job "monitor_csv_folder" to job store "default"
+2025-03-02 03:44:09,278 - apscheduler.scheduler - INFO - Scheduler started
+2025-03-02 03:44:19,873 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-03-02 03:44:19,874 - apscheduler.scheduler - INFO - Added job "monitor_csv_folder" to job store "default"
+2025-03-02 03:44:19,874 - apscheduler.scheduler - INFO - Scheduler started
+2025-03-02 03:48:24,679 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-03-02 03:48:24,680 - apscheduler.scheduler - INFO - Added job "monitor_csv_folder" to job store "default"
+2025-03-02 03:48:24,680 - apscheduler.scheduler - INFO - Scheduler started
+2025-03-02 03:48:36,066 - app.services.admin - INFO - Starting to process file: test.csv
+2025-03-02 03:48:36,066 - app.services.admin - INFO - File test.csv successfully saved locally at csv/20250302_034836_test.csv
+2025-03-02 03:48:36,201 - app.services.admin - ERROR - Error processing file test.csv: 530 Login incorrect.
+Traceback (most recent call last):
+  File "/home/xterr/Programming/best_hack/python-backend/app/services/admin.py", line 47, in process_csv
+    ftp.login(FTP_USER, FTP_PASSWORD)
+  File "/usr/lib/python3.10/ftplib.py", line 414, in login
+    resp = self.sendcmd('PASS ' + passwd)
+  File "/usr/lib/python3.10/ftplib.py", line 281, in sendcmd
+    return self.getresp()
+  File "/usr/lib/python3.10/ftplib.py", line 254, in getresp
+    raise error_perm(resp)
+ftplib.error_perm: 530 Login incorrect.
+2025-03-02 03:52:24,470 - app.services.admin - INFO - Starting to process file: test.csv
+2025-03-02 03:52:24,470 - app.services.admin - INFO - File test.csv successfully saved locally at csv/20250302_035224_test.csv
+2025-03-02 03:52:28,218 - app.services.admin - ERROR - Error processing file test.csv: 530 Login incorrect.
+Traceback (most recent call last):
+  File "/home/xterr/Programming/best_hack/python-backend/app/services/admin.py", line 47, in process_csv
+    ftp.login(FTP_USER, FTP_PASSWORD)
+  File "/usr/lib/python3.10/ftplib.py", line 414, in login
+    resp = self.sendcmd('PASS ' + passwd)
+  File "/usr/lib/python3.10/ftplib.py", line 281, in sendcmd
+    return self.getresp()
+  File "/usr/lib/python3.10/ftplib.py", line 254, in getresp
+    raise error_perm(resp)
+ftplib.error_perm: 530 Login incorrect.
+2025-03-02 03:54:00,377 - app.services.admin - INFO - Starting to process file: test.csv
+2025-03-02 03:54:00,378 - app.services.admin - INFO - File test.csv successfully saved locally at csv/20250302_035400_test.csv
+2025-03-02 03:54:03,745 - app.services.admin - ERROR - Error processing file test.csv: 530 Login incorrect.
+Traceback (most recent call last):
+  File "/home/xterr/Programming/best_hack/python-backend/app/services/admin.py", line 47, in process_csv
+    ftp.login(FTP_USER, FTP_PASSWORD)
+  File "/usr/lib/python3.10/ftplib.py", line 414, in login
+    resp = self.sendcmd('PASS ' + passwd)
+  File "/usr/lib/python3.10/ftplib.py", line 281, in sendcmd
+    return self.getresp()
+  File "/usr/lib/python3.10/ftplib.py", line 254, in getresp
+    raise error_perm(resp)
+ftplib.error_perm: 530 Login incorrect.
+2025-03-02 04:14:46,192 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-03-02 04:14:46,193 - apscheduler.scheduler - INFO - Added job "monitor_csv_folder" to job store "default"
+2025-03-02 04:14:46,193 - apscheduler.scheduler - INFO - Scheduler started
+2025-03-02 04:15:08,210 - app.services.admin - INFO - Starting to process file: test.csv
+2025-03-02 04:15:08,210 - app.services.admin - INFO - File test.csv successfully saved locally at csv/20250302_041508_test.csv
+2025-03-02 04:15:11,738 - app.services.admin - WARNING - Failed to upload file to FTP: 530 Login incorrect.
+2025-03-02 04:15:11,739 - app.services.admin - INFO - File will be stored locally only.
+2025-03-02 04:15:30,450 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-03-02 04:15:30,451 - apscheduler.scheduler - INFO - Added job "monitor_csv_folder" to job store "default"
+2025-03-02 04:15:30,451 - apscheduler.scheduler - INFO - Scheduler started
+2025-03-02 04:15:32,542 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-03-02 04:15:32,543 - apscheduler.scheduler - INFO - Added job "monitor_csv_folder" to job store "default"
+2025-03-02 04:15:32,543 - apscheduler.scheduler - INFO - Scheduler started
+2025-03-02 04:15:34,767 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-03-02 04:15:34,767 - apscheduler.scheduler - INFO - Added job "monitor_csv_folder" to job store "default"
+2025-03-02 04:15:34,767 - apscheduler.scheduler - INFO - Scheduler started
+2025-03-02 04:15:36,962 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-03-02 04:15:36,962 - apscheduler.scheduler - INFO - Added job "monitor_csv_folder" to job store "default"
+2025-03-02 04:15:36,962 - apscheduler.scheduler - INFO - Scheduler started
+2025-03-02 05:49:12,817 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-03-02 05:49:12,818 - apscheduler.scheduler - INFO - Added job "monitor_csv_folder" to job store "default"
+2025-03-02 05:49:12,818 - apscheduler.scheduler - INFO - Scheduler started
+2025-03-02 05:49:27,491 - app.services.lot_service - INFO - Search completed - Query: АИ-95, Results: 1
+2025-03-02 05:49:33,677 - app.services.lot_service - INFO - Search completed - Query: АИ-95 Москва, Results: 2
+2025-03-02 05:49:45,175 - app.services.lot_service - INFO - Search completed - Query: АИ-95 Москва, Results: 2
+2025-03-02 05:49:49,913 - app.services.lot_service - INFO - Fetched 0 lots with filters: {'fuel_type': ['92']}, price_range: None
+2025-03-02 05:49:54,754 - app.services.lot_service - INFO - Fetched 0 lots with filters: {'fuel_type': ['95']}, price_range: None
+2025-03-02 05:50:36,329 - app.services.lot_service - INFO - Fetched 1 lots with filters: {'fuel_type': ['АИ-95']}, price_range: None
+2025-03-02 05:59:17,054 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-03-02 05:59:17,054 - apscheduler.scheduler - INFO - Added job "monitor_csv_folder" to job store "default"
+2025-03-02 05:59:17,054 - apscheduler.scheduler - INFO - Scheduler started
+2025-03-02 05:59:29,570 - app.services.lot_service - INFO - Fetched 2 lots with filters: {}, price_range: None
+2025-03-02 05:59:39,230 - app.services.lot_service - INFO - Fetched 1 lots with filters: {}, price_range: None

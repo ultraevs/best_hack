@@ -77,6 +77,13 @@ def delete_order(order_id: int, db: Session, current_user: TokenData):
             raise HTTPException(status_code=404, detail="Lot not found")
         
         lot.available_volume += order.volume
+        
+        lot.lot_price = lot.available_volume * lot.price_per_ton
+        
+        if lot.available_volume > 0 and lot.status == "Продан":
+            lot.status = "Подтвержден"
+        
+        # Удаляем заказ
         db.delete(order)
         db.commit()
         
