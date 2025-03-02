@@ -154,3 +154,126 @@ ftplib.error_perm: 530 Login incorrect.
 2025-03-02 08:17:48,087 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
 2025-03-02 08:17:48,088 - apscheduler.scheduler - INFO - Added job "monitor_csv_folder" to job store "default"
 2025-03-02 08:17:48,088 - apscheduler.scheduler - INFO - Scheduler started
+2025-03-02 08:19:08,321 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-03-02 08:19:08,322 - apscheduler.scheduler - INFO - Added job "monitor_csv_folder" to job store "default"
+2025-03-02 08:19:08,322 - apscheduler.scheduler - INFO - Scheduler started
+2025-03-02 09:03:31,745 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-03-02 09:03:31,745 - apscheduler.scheduler - INFO - Added job "monitor_csv_folder" to job store "default"
+2025-03-02 09:03:31,745 - apscheduler.scheduler - INFO - Scheduler started
+2025-03-02 09:03:51,903 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-03-02 09:03:51,903 - apscheduler.scheduler - INFO - Added job "monitor_csv_folder" to job store "default"
+2025-03-02 09:03:51,903 - apscheduler.scheduler - INFO - Scheduler started
+2025-03-02 09:03:56,903 - apscheduler.executors.default - INFO - Running job "monitor_csv_folder (trigger: interval[0:00:05], next run at: 2025-03-02 09:03:56 MSK)" (scheduled at 2025-03-02 09:03:56.902908+03:00)
+2025-03-02 09:03:56,904 - apscheduler.executors.default - INFO - Job "monitor_csv_folder (trigger: interval[0:00:05], next run at: 2025-03-02 09:04:01 MSK)" executed successfully
+2025-03-02 09:04:01,860 - app.services.admin - INFO - Starting to process file: test.csv
+2025-03-02 09:04:01,861 - app.services.admin - INFO - File test.csv successfully saved locally at csv/20250302_090401_test.csv
+2025-03-02 09:04:01,903 - apscheduler.executors.default - INFO - Running job "monitor_csv_folder (trigger: interval[0:00:05], next run at: 2025-03-02 09:04:06 MSK)" (scheduled at 2025-03-02 09:04:01.902908+03:00)
+2025-03-02 09:04:01,942 - apscheduler.executors.default - INFO - Job "monitor_csv_folder (trigger: interval[0:00:05], next run at: 2025-03-02 09:04:06 MSK)" executed successfully
+2025-03-02 09:04:05,062 - app.services.admin - WARNING - Failed to upload file to FTP: 530 Login incorrect.
+2025-03-02 09:04:05,063 - app.services.admin - INFO - File will be stored locally only.
+2025-03-02 09:04:06,904 - apscheduler.executors.default - INFO - Running job "monitor_csv_folder (trigger: interval[0:00:05], next run at: 2025-03-02 09:04:11 MSK)" (scheduled at 2025-03-02 09:04:06.902908+03:00)
+2025-03-02 09:04:06,905 - apscheduler.executors.default - INFO - Job "monitor_csv_folder (trigger: interval[0:00:05], next run at: 2025-03-02 09:04:11 MSK)" executed successfully
+2025-03-02 09:04:11,903 - apscheduler.executors.default - INFO - Running job "monitor_csv_folder (trigger: interval[0:00:05], next run at: 2025-03-02 09:04:16 MSK)" (scheduled at 2025-03-02 09:04:11.902908+03:00)
+2025-03-02 09:04:11,905 - apscheduler.executors.default - INFO - Job "monitor_csv_folder (trigger: interval[0:00:05], next run at: 2025-03-02 09:04:16 MSK)" executed successfully
+2025-03-02 09:04:14,903 - app.services.lot_service - INFO - Lot marked as 'Неактивен' - Lot ID: 19, Date: 2023-10-01
+2025-03-02 09:04:14,904 - app.services.lot_service - INFO - Lot marked as 'Неактивен' - Lot ID: 20, Date: 2023-10-01
+2025-03-02 09:04:14,904 - app.services.lot_service - INFO - Lot marked as 'Неактивен' - Lot ID: 21, Date: 2023-10-02
+2025-03-02 09:04:14,904 - app.services.lot_service - INFO - Lot marked as 'Неактивен' - Lot ID: 22, Date: 2023-10-02
+2025-03-02 09:04:14,905 - app.services.lot_service - INFO - Lot marked as 'Неактивен' - Lot ID: 23, Date: 2023-10-02
+2025-03-02 09:04:14,905 - app.services.lot_service - INFO - Lot marked as 'Неактивен' - Lot ID: 24, Date: 2023-10-02
+2025-03-02 09:04:14,905 - app.services.lot_service - INFO - Lot marked as 'Неактивен' - Lot ID: 25, Date: 2023-10-01
+2025-03-02 09:04:14,906 - app.services.lot_service - INFO - Lot marked as 'Неактивен' - Lot ID: 26, Date: 2023-10-01
+2025-03-02 09:04:14,906 - app.services.lot_service - INFO - Lot marked as 'Неактивен' - Lot ID: 27, Date: 2023-10-02
+2025-03-02 09:04:14,906 - app.services.lot_service - INFO - Lot marked as 'Неактивен' - Lot ID: 28, Date: 2023-10-02
+2025-03-02 09:04:14,907 - app.services.lot_service - INFO - Lot marked as 'Неактивен' - Lot ID: 29, Date: 2023-10-02
+2025-03-02 09:04:14,907 - app.services.lot_service - INFO - Lot marked as 'Неактивен' - Lot ID: 30, Date: 2023-10-02
+2025-03-02 09:04:15,056 - app.services.lot_service - INFO - Fetched 3 lots with filters: {}, price_range: None
+2025-03-02 09:04:16,903 - apscheduler.executors.default - INFO - Running job "monitor_csv_folder (trigger: interval[0:00:05], next run at: 2025-03-02 09:04:21 MSK)" (scheduled at 2025-03-02 09:04:16.902908+03:00)
+2025-03-02 09:04:16,903 - apscheduler.executors.default - INFO - Job "monitor_csv_folder (trigger: interval[0:00:05], next run at: 2025-03-02 09:04:21 MSK)" executed successfully
+2025-03-02 09:04:21,903 - apscheduler.executors.default - INFO - Running job "monitor_csv_folder (trigger: interval[0:00:05], next run at: 2025-03-02 09:04:26 MSK)" (scheduled at 2025-03-02 09:04:21.902908+03:00)
+2025-03-02 09:04:21,903 - apscheduler.executors.default - INFO - Job "monitor_csv_folder (trigger: interval[0:00:05], next run at: 2025-03-02 09:04:26 MSK)" executed successfully
+2025-03-02 09:04:26,903 - apscheduler.executors.default - INFO - Running job "monitor_csv_folder (trigger: interval[0:00:05], next run at: 2025-03-02 09:04:31 MSK)" (scheduled at 2025-03-02 09:04:26.902908+03:00)
+2025-03-02 09:04:26,903 - apscheduler.executors.default - INFO - Job "monitor_csv_folder (trigger: interval[0:00:05], next run at: 2025-03-02 09:04:31 MSK)" executed successfully
+2025-03-02 09:04:31,903 - apscheduler.executors.default - INFO - Running job "monitor_csv_folder (trigger: interval[0:00:05], next run at: 2025-03-02 09:04:36 MSK)" (scheduled at 2025-03-02 09:04:31.902908+03:00)
+2025-03-02 09:04:31,903 - apscheduler.executors.default - INFO - Job "monitor_csv_folder (trigger: interval[0:00:05], next run at: 2025-03-02 09:04:36 MSK)" executed successfully
+2025-03-02 09:04:36,903 - apscheduler.executors.default - INFO - Running job "monitor_csv_folder (trigger: interval[0:00:05], next run at: 2025-03-02 09:04:41 MSK)" (scheduled at 2025-03-02 09:04:36.902908+03:00)
+2025-03-02 09:04:36,904 - apscheduler.executors.default - INFO - Job "monitor_csv_folder (trigger: interval[0:00:05], next run at: 2025-03-02 09:04:41 MSK)" executed successfully
+2025-03-02 09:04:41,905 - apscheduler.executors.default - INFO - Running job "monitor_csv_folder (trigger: interval[0:00:05], next run at: 2025-03-02 09:04:46 MSK)" (scheduled at 2025-03-02 09:04:41.902908+03:00)
+2025-03-02 09:04:41,906 - apscheduler.executors.default - INFO - Job "monitor_csv_folder (trigger: interval[0:00:05], next run at: 2025-03-02 09:04:46 MSK)" executed successfully
+2025-03-02 09:04:46,905 - apscheduler.executors.default - INFO - Running job "monitor_csv_folder (trigger: interval[0:00:05], next run at: 2025-03-02 09:04:51 MSK)" (scheduled at 2025-03-02 09:04:46.902908+03:00)
+2025-03-02 09:04:46,906 - apscheduler.executors.default - INFO - Job "monitor_csv_folder (trigger: interval[0:00:05], next run at: 2025-03-02 09:04:51 MSK)" executed successfully
+2025-03-02 09:04:51,903 - apscheduler.executors.default - INFO - Running job "monitor_csv_folder (trigger: interval[0:00:05], next run at: 2025-03-02 09:04:56 MSK)" (scheduled at 2025-03-02 09:04:51.902908+03:00)
+2025-03-02 09:04:51,904 - apscheduler.executors.default - INFO - Job "monitor_csv_folder (trigger: interval[0:00:05], next run at: 2025-03-02 09:04:56 MSK)" executed successfully
+2025-03-02 09:04:56,903 - apscheduler.executors.default - INFO - Running job "monitor_csv_folder (trigger: interval[0:00:05], next run at: 2025-03-02 09:05:01 MSK)" (scheduled at 2025-03-02 09:04:56.902908+03:00)
+2025-03-02 09:04:56,903 - apscheduler.executors.default - INFO - Job "monitor_csv_folder (trigger: interval[0:00:05], next run at: 2025-03-02 09:05:01 MSK)" executed successfully
+2025-03-02 09:05:01,903 - apscheduler.executors.default - INFO - Running job "monitor_csv_folder (trigger: interval[0:00:05], next run at: 2025-03-02 09:05:06 MSK)" (scheduled at 2025-03-02 09:05:01.902908+03:00)
+2025-03-02 09:05:01,904 - apscheduler.executors.default - INFO - Job "monitor_csv_folder (trigger: interval[0:00:05], next run at: 2025-03-02 09:05:06 MSK)" executed successfully
+2025-03-02 09:05:06,903 - apscheduler.executors.default - INFO - Running job "monitor_csv_folder (trigger: interval[0:00:05], next run at: 2025-03-02 09:05:11 MSK)" (scheduled at 2025-03-02 09:05:06.902908+03:00)
+2025-03-02 09:05:06,904 - apscheduler.executors.default - INFO - Job "monitor_csv_folder (trigger: interval[0:00:05], next run at: 2025-03-02 09:05:11 MSK)" executed successfully
+2025-03-02 09:05:11,903 - apscheduler.executors.default - INFO - Running job "monitor_csv_folder (trigger: interval[0:00:05], next run at: 2025-03-02 09:05:16 MSK)" (scheduled at 2025-03-02 09:05:11.902908+03:00)
+2025-03-02 09:05:11,903 - apscheduler.executors.default - INFO - Job "monitor_csv_folder (trigger: interval[0:00:05], next run at: 2025-03-02 09:05:16 MSK)" executed successfully
+2025-03-02 09:05:16,903 - apscheduler.executors.default - INFO - Running job "monitor_csv_folder (trigger: interval[0:00:05], next run at: 2025-03-02 09:05:21 MSK)" (scheduled at 2025-03-02 09:05:16.902908+03:00)
+2025-03-02 09:05:16,905 - apscheduler.executors.default - INFO - Job "monitor_csv_folder (trigger: interval[0:00:05], next run at: 2025-03-02 09:05:21 MSK)" executed successfully
+2025-03-02 09:05:18,418 - app.services.lot_service - INFO - Fetched 3 lots with filters: {}, price_range: None
+2025-03-02 09:05:21,903 - apscheduler.executors.default - INFO - Running job "monitor_csv_folder (trigger: interval[0:00:05], next run at: 2025-03-02 09:05:26 MSK)" (scheduled at 2025-03-02 09:05:21.902908+03:00)
+2025-03-02 09:05:21,905 - apscheduler.executors.default - INFO - Job "monitor_csv_folder (trigger: interval[0:00:05], next run at: 2025-03-02 09:05:26 MSK)" executed successfully
+2025-03-02 09:05:26,905 - apscheduler.executors.default - INFO - Running job "monitor_csv_folder (trigger: interval[0:00:05], next run at: 2025-03-02 09:05:31 MSK)" (scheduled at 2025-03-02 09:05:26.902908+03:00)
+2025-03-02 09:05:26,906 - apscheduler.executors.default - INFO - Job "monitor_csv_folder (trigger: interval[0:00:05], next run at: 2025-03-02 09:05:31 MSK)" executed successfully
+2025-03-02 09:05:31,904 - apscheduler.executors.default - INFO - Running job "monitor_csv_folder (trigger: interval[0:00:05], next run at: 2025-03-02 09:05:36 MSK)" (scheduled at 2025-03-02 09:05:31.902908+03:00)
+2025-03-02 09:05:31,905 - apscheduler.executors.default - INFO - Job "monitor_csv_folder (trigger: interval[0:00:05], next run at: 2025-03-02 09:05:36 MSK)" executed successfully
+2025-03-02 09:05:36,904 - apscheduler.executors.default - INFO - Running job "monitor_csv_folder (trigger: interval[0:00:05], next run at: 2025-03-02 09:05:41 MSK)" (scheduled at 2025-03-02 09:05:36.902908+03:00)
+2025-03-02 09:05:36,905 - apscheduler.executors.default - INFO - Job "monitor_csv_folder (trigger: interval[0:00:05], next run at: 2025-03-02 09:05:41 MSK)" executed successfully
+2025-03-02 09:05:38,456 - app.services.lot_service - INFO - Fetched lot - Lot ID: 30, Fuel Type: ДТ, NB Name: Нефтебаза_1
+2025-03-02 09:05:41,903 - apscheduler.executors.default - INFO - Running job "monitor_csv_folder (trigger: interval[0:00:05], next run at: 2025-03-02 09:05:46 MSK)" (scheduled at 2025-03-02 09:05:41.902908+03:00)
+2025-03-02 09:05:41,905 - apscheduler.executors.default - INFO - Job "monitor_csv_folder (trigger: interval[0:00:05], next run at: 2025-03-02 09:05:46 MSK)" executed successfully
+2025-03-02 09:05:45,403 - app.services.lot_service - INFO - Fetched 3 lots with filters: {}, price_range: None
+2025-03-02 09:05:46,904 - apscheduler.executors.default - INFO - Running job "monitor_csv_folder (trigger: interval[0:00:05], next run at: 2025-03-02 09:05:51 MSK)" (scheduled at 2025-03-02 09:05:46.902908+03:00)
+2025-03-02 09:05:46,905 - apscheduler.executors.default - INFO - Job "monitor_csv_folder (trigger: interval[0:00:05], next run at: 2025-03-02 09:05:51 MSK)" executed successfully
+2025-03-02 09:05:51,903 - apscheduler.executors.default - INFO - Running job "monitor_csv_folder (trigger: interval[0:00:05], next run at: 2025-03-02 09:05:56 MSK)" (scheduled at 2025-03-02 09:05:51.902908+03:00)
+2025-03-02 09:05:51,904 - apscheduler.executors.default - INFO - Job "monitor_csv_folder (trigger: interval[0:00:05], next run at: 2025-03-02 09:05:56 MSK)" executed successfully
+2025-03-02 09:05:56,904 - apscheduler.executors.default - INFO - Running job "monitor_csv_folder (trigger: interval[0:00:05], next run at: 2025-03-02 09:06:01 MSK)" (scheduled at 2025-03-02 09:05:56.902908+03:00)
+2025-03-02 09:05:56,905 - apscheduler.executors.default - INFO - Job "monitor_csv_folder (trigger: interval[0:00:05], next run at: 2025-03-02 09:06:01 MSK)" executed successfully
+2025-03-02 09:06:01,903 - apscheduler.executors.default - INFO - Running job "monitor_csv_folder (trigger: interval[0:00:05], next run at: 2025-03-02 09:06:06 MSK)" (scheduled at 2025-03-02 09:06:01.902908+03:00)
+2025-03-02 09:06:01,905 - apscheduler.executors.default - INFO - Job "monitor_csv_folder (trigger: interval[0:00:05], next run at: 2025-03-02 09:06:06 MSK)" executed successfully
+2025-03-02 09:06:06,903 - apscheduler.executors.default - INFO - Running job "monitor_csv_folder (trigger: interval[0:00:05], next run at: 2025-03-02 09:06:11 MSK)" (scheduled at 2025-03-02 09:06:06.902908+03:00)
+2025-03-02 09:06:06,904 - apscheduler.executors.default - INFO - Job "monitor_csv_folder (trigger: interval[0:00:05], next run at: 2025-03-02 09:06:11 MSK)" executed successfully
+2025-03-02 09:06:11,903 - apscheduler.executors.default - INFO - Running job "monitor_csv_folder (trigger: interval[0:00:05], next run at: 2025-03-02 09:06:16 MSK)" (scheduled at 2025-03-02 09:06:11.902908+03:00)
+2025-03-02 09:06:11,903 - apscheduler.executors.default - INFO - Job "monitor_csv_folder (trigger: interval[0:00:05], next run at: 2025-03-02 09:06:16 MSK)" executed successfully
+2025-03-02 09:06:16,903 - apscheduler.executors.default - INFO - Running job "monitor_csv_folder (trigger: interval[0:00:05], next run at: 2025-03-02 09:06:21 MSK)" (scheduled at 2025-03-02 09:06:16.902908+03:00)
+2025-03-02 09:06:16,903 - apscheduler.executors.default - INFO - Job "monitor_csv_folder (trigger: interval[0:00:05], next run at: 2025-03-02 09:06:21 MSK)" executed successfully
+2025-03-02 09:06:21,903 - apscheduler.executors.default - INFO - Running job "monitor_csv_folder (trigger: interval[0:00:05], next run at: 2025-03-02 09:06:26 MSK)" (scheduled at 2025-03-02 09:06:21.902908+03:00)
+2025-03-02 09:06:21,904 - apscheduler.executors.default - INFO - Job "monitor_csv_folder (trigger: interval[0:00:05], next run at: 2025-03-02 09:06:26 MSK)" executed successfully
+2025-03-02 09:06:26,903 - apscheduler.executors.default - INFO - Running job "monitor_csv_folder (trigger: interval[0:00:05], next run at: 2025-03-02 09:06:31 MSK)" (scheduled at 2025-03-02 09:06:26.902908+03:00)
+2025-03-02 09:06:26,904 - apscheduler.executors.default - INFO - Job "monitor_csv_folder (trigger: interval[0:00:05], next run at: 2025-03-02 09:06:31 MSK)" executed successfully
+2025-03-02 09:06:31,904 - apscheduler.executors.default - INFO - Running job "monitor_csv_folder (trigger: interval[0:00:05], next run at: 2025-03-02 09:06:36 MSK)" (scheduled at 2025-03-02 09:06:31.902908+03:00)
+2025-03-02 09:06:31,905 - apscheduler.executors.default - INFO - Job "monitor_csv_folder (trigger: interval[0:00:05], next run at: 2025-03-02 09:06:36 MSK)" executed successfully
+2025-03-02 09:06:36,903 - apscheduler.executors.default - INFO - Running job "monitor_csv_folder (trigger: interval[0:00:05], next run at: 2025-03-02 09:06:41 MSK)" (scheduled at 2025-03-02 09:06:36.902908+03:00)
+2025-03-02 09:06:36,903 - apscheduler.executors.default - INFO - Job "monitor_csv_folder (trigger: interval[0:00:05], next run at: 2025-03-02 09:06:41 MSK)" executed successfully
+2025-03-02 09:06:41,903 - apscheduler.executors.default - INFO - Running job "monitor_csv_folder (trigger: interval[0:00:05], next run at: 2025-03-02 09:06:46 MSK)" (scheduled at 2025-03-02 09:06:41.902908+03:00)
+2025-03-02 09:06:41,905 - apscheduler.executors.default - INFO - Job "monitor_csv_folder (trigger: interval[0:00:05], next run at: 2025-03-02 09:06:46 MSK)" executed successfully
+2025-03-02 09:06:46,903 - apscheduler.executors.default - INFO - Running job "monitor_csv_folder (trigger: interval[0:00:05], next run at: 2025-03-02 09:06:51 MSK)" (scheduled at 2025-03-02 09:06:46.902908+03:00)
+2025-03-02 09:06:46,903 - apscheduler.executors.default - INFO - Job "monitor_csv_folder (trigger: interval[0:00:05], next run at: 2025-03-02 09:06:51 MSK)" executed successfully
+2025-03-02 09:06:51,903 - apscheduler.executors.default - INFO - Running job "monitor_csv_folder (trigger: interval[0:00:05], next run at: 2025-03-02 09:06:56 MSK)" (scheduled at 2025-03-02 09:06:51.902908+03:00)
+2025-03-02 09:06:51,904 - apscheduler.executors.default - INFO - Job "monitor_csv_folder (trigger: interval[0:00:05], next run at: 2025-03-02 09:06:56 MSK)" executed successfully
+2025-03-02 09:06:56,903 - apscheduler.executors.default - INFO - Running job "monitor_csv_folder (trigger: interval[0:00:05], next run at: 2025-03-02 09:07:01 MSK)" (scheduled at 2025-03-02 09:06:56.902908+03:00)
+2025-03-02 09:06:56,904 - apscheduler.executors.default - INFO - Job "monitor_csv_folder (trigger: interval[0:00:05], next run at: 2025-03-02 09:07:01 MSK)" executed successfully
+2025-03-02 09:07:01,903 - apscheduler.executors.default - INFO - Running job "monitor_csv_folder (trigger: interval[0:00:05], next run at: 2025-03-02 09:07:06 MSK)" (scheduled at 2025-03-02 09:07:01.902908+03:00)
+2025-03-02 09:07:01,904 - apscheduler.executors.default - INFO - Job "monitor_csv_folder (trigger: interval[0:00:05], next run at: 2025-03-02 09:07:06 MSK)" executed successfully
+2025-03-02 09:07:06,903 - apscheduler.executors.default - INFO - Running job "monitor_csv_folder (trigger: interval[0:00:05], next run at: 2025-03-02 09:07:11 MSK)" (scheduled at 2025-03-02 09:07:06.902908+03:00)
+2025-03-02 09:07:06,903 - apscheduler.executors.default - INFO - Job "monitor_csv_folder (trigger: interval[0:00:05], next run at: 2025-03-02 09:07:11 MSK)" executed successfully
+2025-03-02 09:07:11,903 - apscheduler.executors.default - INFO - Running job "monitor_csv_folder (trigger: interval[0:00:05], next run at: 2025-03-02 09:07:16 MSK)" (scheduled at 2025-03-02 09:07:11.902908+03:00)
+2025-03-02 09:07:11,904 - apscheduler.executors.default - INFO - Job "monitor_csv_folder (trigger: interval[0:00:05], next run at: 2025-03-02 09:07:16 MSK)" executed successfully
+2025-03-02 09:07:16,903 - apscheduler.executors.default - INFO - Running job "monitor_csv_folder (trigger: interval[0:00:05], next run at: 2025-03-02 09:07:21 MSK)" (scheduled at 2025-03-02 09:07:16.902908+03:00)
+2025-03-02 09:07:16,904 - apscheduler.executors.default - INFO - Job "monitor_csv_folder (trigger: interval[0:00:05], next run at: 2025-03-02 09:07:21 MSK)" executed successfully
+2025-03-02 09:07:21,903 - apscheduler.executors.default - INFO - Running job "monitor_csv_folder (trigger: interval[0:00:05], next run at: 2025-03-02 09:07:26 MSK)" (scheduled at 2025-03-02 09:07:21.902908+03:00)
+2025-03-02 09:07:21,903 - apscheduler.executors.default - INFO - Job "monitor_csv_folder (trigger: interval[0:00:05], next run at: 2025-03-02 09:07:26 MSK)" executed successfully
+2025-03-02 09:07:26,903 - apscheduler.executors.default - INFO - Running job "monitor_csv_folder (trigger: interval[0:00:05], next run at: 2025-03-02 09:07:31 MSK)" (scheduled at 2025-03-02 09:07:26.902908+03:00)
+2025-03-02 09:07:26,903 - apscheduler.executors.default - INFO - Job "monitor_csv_folder (trigger: interval[0:00:05], next run at: 2025-03-02 09:07:31 MSK)" executed successfully
+2025-03-02 09:07:31,903 - apscheduler.executors.default - INFO - Running job "monitor_csv_folder (trigger: interval[0:00:05], next run at: 2025-03-02 09:07:36 MSK)" (scheduled at 2025-03-02 09:07:31.902908+03:00)
+2025-03-02 09:07:31,903 - apscheduler.executors.default - INFO - Job "monitor_csv_folder (trigger: interval[0:00:05], next run at: 2025-03-02 09:07:36 MSK)" executed successfully
+2025-03-02 09:07:36,903 - apscheduler.executors.default - INFO - Running job "monitor_csv_folder (trigger: interval[0:00:05], next run at: 2025-03-02 09:07:41 MSK)" (scheduled at 2025-03-02 09:07:36.902908+03:00)
+2025-03-02 09:07:36,904 - apscheduler.executors.default - INFO - Job "monitor_csv_folder (trigger: interval[0:00:05], next run at: 2025-03-02 09:07:41 MSK)" executed successfully
+2025-03-02 09:07:41,903 - apscheduler.executors.default - INFO - Running job "monitor_csv_folder (trigger: interval[0:00:05], next run at: 2025-03-02 09:07:46 MSK)" (scheduled at 2025-03-02 09:07:41.902908+03:00)
+2025-03-02 09:07:41,905 - apscheduler.executors.default - INFO - Job "monitor_csv_folder (trigger: interval[0:00:05], next run at: 2025-03-02 09:07:46 MSK)" executed successfully
+2025-03-02 09:07:46,903 - apscheduler.executors.default - INFO - Running job "monitor_csv_folder (trigger: interval[0:00:05], next run at: 2025-03-02 09:07:51 MSK)" (scheduled at 2025-03-02 09:07:46.902908+03:00)
+2025-03-02 09:07:46,904 - apscheduler.executors.default - INFO - Job "monitor_csv_folder (trigger: interval[0:00:05], next run at: 2025-03-02 09:07:51 MSK)" executed successfully

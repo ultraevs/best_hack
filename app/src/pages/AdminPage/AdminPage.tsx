@@ -22,7 +22,7 @@ export function AdminPage() {
 
     try {
       const response = await axios.post(
-        'http://localhost:8000/api/v1/upload-csv',
+        'http://shmyaks.ru/api/v1/upload-csv',
         formData,
         {
           headers: {
