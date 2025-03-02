@@ -12,7 +12,14 @@ import { LotPage } from '@/pages/LotPage'
 export function Router() {
   return (
     <Routes>
-      <Route path={routes.main.url} element={<MainPage />} />
+      <Route
+        path={routes.main.url}
+        element={
+          <PrivateRoute>
+            <MainPage />
+          </PrivateRoute>
+        }
+      />
       <Route
         path={routes.profile.url}
         element={
