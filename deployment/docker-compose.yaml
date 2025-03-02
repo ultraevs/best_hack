@@ -1,0 +1,18 @@
+version: "3.3"
+
+services:
+  frontend:
+    build:
+      context: ../app/
+      dockerfile: Dockerfile
+    ports:
+      - "5173:5173"
+  backend:
+    build:
+      context: ../python-backend/
+      dockerfile: Dockerfile
+    restart: always
+    environment:
+      - DOCKER_MODE=1
+    ports:
+      - "8000:8000"
