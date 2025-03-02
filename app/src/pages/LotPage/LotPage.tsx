@@ -79,6 +79,10 @@ const VolumeInput = styled(Input)`
   height: 44px;
 `
 
+const AddressInput = styled(Input)`
+  height: 44px;
+`
+
 interface DeliveryTabProps {
   isSelected: boolean
 }
@@ -307,7 +311,7 @@ export function LotPage() {
                     control={control}
                     name='delivery_address'
                     render={({ field }) => (
-                      <Input
+                      <AddressInput
                         value={field.value ?? ''}
                         onChange={field.onChange}
                         placeholder='Москва, Ленинский пр-кт, дом 52'
