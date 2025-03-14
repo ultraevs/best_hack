@@ -30,7 +30,7 @@
 
 ##  Состав команды
  - Михаил Евсеев - Backend Developer
- - Артем Брежнев - UX/UI Designer
+ - Артем Брежнев - UX/UI Designer and Backend Developer
  - Костя Цой - Frontend Developer
  - Глеб Таланцев - Frontend Developer and Project Manager
 
